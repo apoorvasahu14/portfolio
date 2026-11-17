@@ -2,15 +2,30 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apoorva Sahu | Product, Brand & Performance Marketer</title>
-  <meta name="description" content="Portfolio of Apoorva Sahu – MBA (Marketing) & Computer Science Engineer. Experienced across PMM, Lifecycle Performance Marketing, and D2C Brand Strategy.">
-  
-  <!-- Google Fonts: Plus Jakarta Sans -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Apoorva Sahu - Product Marketing &amp; Brand Strategy</title>
+  <!-- Palette: Carbon Copy (cool gray / near-black / electric blue) -->
+  <meta name="description" content="Portfolio of Apoorva Sahu. Product Marketing & Brand Strategy. Connecting showroom floor customer psychology with bottom-up GTM engines and 700+ lifecycle campaigns.">
+
+  <!-- OpenGraph / LinkedIn / WhatsApp Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://apoorvasahu.vercel.app/">
+  <meta property="og:title" content="Apoorva Sahu - Product Marketing & Brand Strategy">
+  <meta property="og:description" content="Selling ₹80K luxury tech taught me how people think. Product Marketing & Brand Strategy in Bengaluru.">
+  <meta property="og:image" content="https://apoorvasahu.vercel.app/assets/self.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Apoorva Sahu - Product Marketing & Brand Strategy">
+  <meta name="twitter:description" content="Selling ₹80K luxury tech taught me how people think. Product Marketing & Brand Strategy in Bengaluru.">
+  <meta name="twitter:image" content="https://apoorvasahu.vercel.app/assets/self.jpg">
+
+  <!-- Inline SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111418'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='28' fill='%23E4E7EA'%3EAS%3C/text%3E%3Ccircle cx='50' cy='16' r='5' fill='%23B31E5C'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Newsreader (editorial display) + Archivo (text) + IBM Plex Mono (field notes) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400;1,6..72,600&display=swap" rel="stylesheet">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -18,514 +33,1061 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Newsreader"', '"Iowan Old Style"', 'Georgia', 'serif'],
+            sans: ['"Archivo"', '"Helvetica Neue"', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
           },
           colors: {
-            brand: {
-              pmm: '#8B5CF6',     /* Violet */
-              perf: '#10B981',    /* Emerald */
-              d2c: '#F59E0B',     /* Amber */
-              creative: '#06B6D4' /* Cyan */
-            }
+            paper: '#E4E7EA',
+            cream: '#D4D9DE',
+            ink: '#111418',
+            muted: '#4A5058',
+            indigo: '#2450D0',
+            brick: '#B31E5C',
+            violet: '#6B5CA5',
+            lilac: '#A78BFA',
+            plum: '#5B4B8A',
+            wine: '#2A3B6B'
           }
         }
       }
     }
   </script>
-  
-  <!-- Lucide Icons CDN -->
+
+  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
+  <!--
+    ==========================================================================
+    QUICK CUSTOMIZATION GUIDE (Non-blocking dependencies you can swap anytime)
+    1. Portrait image:       assets/self.jpg
+    2. Public Resume PDF:    assets/Apoorva-Sahu-Resume.pdf (consider redacting phone)
+    3. Swipe File Images:    assets/rvcj-post.png
+                             assets/bhubaneswar-banner.png
+                             assets/ep-gazette-cover.png (+ optional ep-testimonial-booklet.pdf)
+                             assets/covaxin-1.png
+    4. Search "TODO-SWAP" in this file to replace sample Tear-Downs, Cool
+       Campaigns, or your specific Cooking / Book / Movie picks.
+    ==========================================================================
+  -->
+
   <style>
-    /* Custom subtle glassmorphism */
-    .glass-card {
-      background: rgba(17, 24, 39, 0.7);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    body {
+      background-color: #E4E7EA;
+      color: #111418;
+      background-image: radial-gradient(rgba(17, 20, 24,0.16) 0.75px, transparent 0.75px);
+      background-size: 24px 24px;
     }
-    .glass-card:hover {
-      border-color: rgba(255, 255, 255, 0.18);
+
+    .editorial-card {
+      background-color: #FFFFFF;
+      border: 1.5px solid #111418;
+      box-shadow: 4px 4px 0px #111418;
+      transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.2s cubic-bezier(0.22, 1, 0.36, 1);
     }
-    .aurora-bg {
-      background-image: 
-        radial-gradient(at 0% 0%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
-        radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.12) 0px, transparent 50%),
-        radial-gradient(at 50% 50%, rgba(245, 158, 11, 0.08) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.12) 0px, transparent 50%);
+
+    .editorial-card:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px #111418;
+    }
+
+    .sticker-pill {
+      border: 1.5px solid #111418;
+      box-shadow: 2px 2px 0px #111418;
+    }
+
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Tactile washi tape strip */
+    .washi-tape {
+      background-color: rgba(107, 92, 165, 0.28);
+      border-left: 2px dashed rgba(17, 20, 24, 0.3);
+      border-right: 2px dashed rgba(17, 20, 24, 0.3);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    }
+    .washi-tape-brick {
+      background-color: rgba(179, 30, 92, 0.16);
+      border-left: 2px dashed rgba(179, 30, 92, 0.35);
+      border-right: 2px dashed rgba(179, 30, 92, 0.35);
+    }
+    .washi-tape-plum {
+      background-color: rgba(91, 75, 138, 0.18);
+      border-left: 2px dashed rgba(91, 75, 138, 0.35);
+      border-right: 2px dashed rgba(91, 75, 138, 0.35);
+    }
+
+    /* Rubber stamp badge */
+    .stamp-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      border: 1.5px dashed currentColor;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-family: "IBM Plex Mono", monospace;
+      font-weight: 700;
+      border-radius: 9999px;
+      user-select: none;
+    }
+
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: ticker 34s linear infinite;
+    }
+
+    .ticker-wrap:hover .ticker-track {
+      animation-play-state: paused;
+    }
+
+    /* Anchor targets clear the sticky nav on every screen size */
+    html { scroll-padding-top: 5rem; }
+
+    /* Touch gets real targets and a themed focus ring */
+    :where(a, button) { -webkit-tap-highlight-color: rgba(107, 92, 165, 0.2); }
+    :where(a, button):focus-visible { outline: 3px solid #6B5CA5; outline-offset: 3px; }
+
+    @media (hover: none) {
+      .editorial-card:hover { transform: none; box-shadow: 4px 4px 0px #111418; }
+    }
+
+    /* Respect notches and home indicators in landscape and notched phones */
+    .safe-x {
+      padding-left: max(1.25rem, env(safe-area-inset-left));
+      padding-right: max(1.25rem, env(safe-area-inset-right));
+    }
+    @media (min-width: 640px) {
+      .safe-x {
+        padding-left: max(1.5rem, env(safe-area-inset-left));
+        padding-right: max(1.5rem, env(safe-area-inset-right));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-track { animation: none; }
+      .editorial-card, .editorial-card:hover { transition: none; transform: none; }
     }
   </style>
 </head>
-<body class="bg-[#090D16] text-slate-100 font-sans antialiased selection:bg-violet-500 selection:text-white aurora-bg min-h-screen">
+<body class="font-sans antialiased selection:bg-violet selection:text-white min-h-screen">
 
-  <!-- NAVBAR -->
-  <nav class="fixed top-0 left-0 right-0 z-40 bg-[#090D16]/80 backdrop-blur-md border-b border-white/5">
-    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#" class="font-bold text-lg tracking-tight hover:opacity-80 transition-opacity flex items-center gap-2">
-        <span class="w-2.5 h-2.5 rounded-full bg-violet-400 animate-pulse"></span>
-        <span>Apoorva Sahu</span>
+  <!-- TOP NAVIGATION -->
+  <nav class="sticky top-0 z-40 bg-paper/90 backdrop-blur-md border-b-2 border-ink">
+    <div class="safe-x max-w-6xl mx-auto h-16 flex items-center justify-between gap-1.5 sm:gap-4">
+      <a href="#" aria-label="Apoorva Sahu, back to top" class="min-h-11 min-w-11 flex items-center gap-2.5 font-display font-bold text-xl tracking-tight text-ink hover:opacity-80 transition-opacity">
+        <span class="w-8 h-8 rounded-lg bg-ink text-paper flex items-center justify-center text-sm font-bold border border-ink">AS</span>
+        <span class="hidden min-[400px]:inline">Apoorva Sahu</span>
       </a>
 
-      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-        <a href="#work" class="hover:text-white transition-colors">Featured Work</a>
-        <a href="#creative" class="hover:text-white transition-colors">Creative Swipe File</a>
-        <a href="#skills" class="hover:text-white transition-colors">Toolkit</a>
-        <a href="#about" class="hover:text-white transition-colors">About</a>
+      <div class="hidden md:flex items-center gap-7 text-sm font-semibold text-ink/80">
+        <a href="#story" class="min-h-11 px-1 inline-flex items-center hover:text-brick transition-colors">Who I Am</a>
+        <a href="#work" class="min-h-11 px-1 inline-flex items-center hover:text-brick transition-colors">Case Studies</a>
+        <a href="#creative" class="min-h-11 px-1 inline-flex items-center hover:text-brick transition-colors">Campaigns</a>
+        <a href="#hobbies" class="min-h-11 px-1 inline-flex items-center hover:text-brick transition-colors">Off the Clock</a>
       </div>
 
-      <div class="flex items-center gap-3">
-        <a href="https://linkedin.com/in/apoorva-sahu" target="_blank" rel="noopener noreferrer" class="p-2 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" title="LinkedIn">
-          <i data-lucide="linkedin" class="w-5 h-5"></i>
+      <div class="flex items-center gap-1.5 sm:gap-2.5">
+        <a href="assets/Apoorva-Sahu-Resume.pdf" target="_blank" rel="noopener noreferrer"
+           class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold px-3.5 py-2 min-h-11 rounded-lg bg-cream text-ink border-[1.5px] border-ink hover:bg-violet hover:text-white transition-colors">
+          <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+          <span>Resume</span>
         </a>
-        <a href="#contact" class="text-xs font-semibold px-4 py-2 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-lg shadow-lg shadow-violet-600/20 transition-all">
-          Get in Touch
+        <a href="https://www.linkedin.com/in/apoorva-sahu-3b23781b5/" target="_blank" rel="noopener noreferrer"
+           aria-label="Apoorva Sahu on LinkedIn"
+           class="min-h-11 min-w-11 p-2.5 flex items-center justify-center rounded-lg bg-white border-[1.5px] border-ink text-ink hover:bg-indigo hover:text-white transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-4 h-4 shrink-0">
+            <path d="M20.45 2H3.55C2.7 2 2 2.7 2 3.55v16.9c0 .85.7 1.55 1.55 1.55h16.9c.85 0 1.55-.7 1.55-1.55V3.55C22 2.7 21.3 2 20.45 2zM7.93 18.75H4.98V9.2h2.95v9.55zM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42zm12.3 10.85h-2.94v-4.64c0-1.11-.02-2.53-1.54-2.53-1.55 0-1.79 1.2-1.79 2.45v4.72H9.54V9.2h2.83v1.3h.04c.39-.74 1.35-1.53 2.78-1.53 2.97 0 3.52 1.96 3.52 4.5v5.28z"/>
+          </svg>
         </a>
+        <a href="#contact"
+           class="text-xs font-bold px-4 min-h-11 inline-flex items-center rounded-lg bg-ink text-paper border-[1.5px] border-ink hover:bg-brick transition-colors">
+          Say Hi
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" id="mobileMenuBtn" onclick="toggleMobileMenu()"
+                class="md:hidden min-h-11 min-w-11 p-2.5 flex items-center justify-center rounded-lg bg-cream border-[1.5px] border-ink text-ink hover:bg-violet hover:text-white transition-colors"
+                aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <i data-lucide="menu" id="menuIconOpen" class="w-4 h-4"></i>
+          <i data-lucide="x" id="menuIconClose" class="w-4 h-4 hidden"></i>
+        </button>
       </div>
+    </div>
+
+    <!-- Mobile Slide-Down Menu Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden border-t-2 border-ink bg-paper safe-x py-3 flex flex-col font-display font-bold text-sm text-ink shadow-lg max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain">
+      <a href="#story" onclick="toggleMobileMenu()" class="min-h-11 py-3 flex items-center border-b border-ink/10 hover:text-brick transition-colors">Who I Am</a>
+      <a href="#work" onclick="toggleMobileMenu()" class="min-h-11 py-3 flex items-center border-b border-ink/10 hover:text-brick transition-colors">Case Studies &amp; Tear-Downs</a>
+      <a href="#creative" onclick="toggleMobileMenu()" class="min-h-11 py-3 flex items-center border-b border-ink/10 hover:text-brick transition-colors">Creative Work &amp; Campaigns</a>
+      <a href="#hobbies" onclick="toggleMobileMenu()" class="min-h-11 py-3 flex items-center border-b border-ink/10 hover:text-brick transition-colors">What Feeds My Taste</a>
+      <a href="#skills" onclick="toggleMobileMenu()" class="min-h-11 py-3 flex items-center border-b border-ink/10 hover:text-brick transition-colors">Toolkit &amp; Frameworks</a>
+      <a href="assets/Apoorva-Sahu-Resume.pdf" target="_blank" rel="noopener noreferrer" class="min-h-11 py-3 inline-flex items-center gap-2 text-brick">
+        <i data-lucide="file-text" class="w-4 h-4"></i>
+        <span>Download Resume PDF</span>
+      </a>
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <header class="pt-36 pb-20 px-6 max-w-5xl mx-auto text-center relative">
-    <!-- Role badges -->
-    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-violet-500/30 bg-violet-500/10 text-violet-300 text-xs font-semibold mb-6">
-      <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-      <span>MBA (Marketing) Candidate &bull; B.Tech Computer Science</span>
+  <main>
+    <!-- HERO SECTION: HUMAN & CHARACTER-FIRST -->
+    <header class="pt-12 pb-16 sm:pt-20 sm:pb-24 px-5 sm:px-6 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+        <!-- Left: Intro & Personality -->
+        <div class="lg:col-span-7 text-left">
+          <div class="inline-flex flex-wrap items-center gap-2 mb-6">
+            <span class="sticker-pill px-3 py-1 rounded-full bg-violet text-white text-xs font-bold tracking-wide">
+              Product Marketing &bull; Brand Strategy
+            </span>
+            <span class="sticker-pill px-3 py-1 rounded-full bg-white text-ink text-xs font-mono font-medium">
+              NMIMS MBA '27 &bull; KIIT CS '23
+            </span>
+          </div>
+
+          <h1 class="font-display text-[2rem] sm:text-5xl lg:text-[3.35rem] font-bold tracking-tight leading-[1.14] sm:leading-[1.1] text-ink mb-6">
+            Selling ₹80K appliances<br class="hidden sm:block">
+            taught me <span class="italic text-brick underline decoration-violet decoration-4 underline-offset-4">how people think</span>.
+          </h1>
+
+          <p class="text-[15px] sm:text-lg text-muted leading-relaxed max-w-xl mb-8">
+            Hi, I&rsquo;m <strong class="text-ink font-semibold">Apoorva</strong>. I do Product Marketing and Brand Strategy. Before optimizing funnels, I stood on showroom floors in Bangalore discovering why buyers hesitate before spending ₹80,000 on luxury tech. I connect that raw consumer psychology with bottom-up pricing models, 700+ lifecycle campaigns, and GTM execution that actually converts.
+          </p>
+
+          <!-- Primary CTAs -->
+          <div class="flex flex-wrap items-center gap-3.5">
+            <a href="#work" class="editorial-card px-5 py-3 min-h-11 rounded-xl bg-ink text-paper font-bold text-sm inline-flex items-center gap-2 hover:bg-indigo hover:text-white">
+              <span>Explore My Work</span>
+              <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+            </a>
+
+            <a href="assets/Apoorva-Sahu-Resume.pdf" target="_blank" rel="noopener noreferrer"
+               class="editorial-card px-5 py-3 min-h-11 rounded-xl bg-violet text-white font-bold text-sm inline-flex items-center gap-2">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span>Resume PDF</span>
+            </a>
+
+            <button type="button" onclick="copyEmail()" id="copyBtn"
+                    class="editorial-card px-5 py-3 min-h-11 rounded-xl bg-white text-ink font-semibold text-sm inline-flex items-center gap-2">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+              <span>Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Mobile quick-scan proof line: the three facts a recruiter needs before the fold -->
+          <div class="sm:hidden mt-6 -mx-1 rounded-xl bg-white border-[1.5px] border-ink px-3 py-2.5 text-[11px] font-mono text-ink flex flex-wrap items-center gap-x-2 gap-y-1 shadow-[2px_2px_0_#111418]">
+            <span><strong class="text-brick">₹20L+</strong> revenue</span>
+            <span class="text-ink/40" aria-hidden="true">/</span>
+            <span><strong class="text-plum">45%</strong> close rate</span>
+            <span class="text-ink/40" aria-hidden="true">/</span>
+            <span><strong class="text-wine">700+</strong> campaigns</span>
+          </div>
+
+          <p id="copyStatus" class="sr-only" aria-live="polite"></p>
+        </div>
+
+        <!-- Right: Editorial Portrait Frame with Tactile Tape -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="relative w-full max-w-[15rem] sm:max-w-sm">
+            <!-- Washi tape pinning the top -->
+            <div class="washi-tape absolute -top-3 left-1/2 -translate-x-1/2 z-30 w-32 h-6 -rotate-1 pointer-events-none"></div>
+
+            <!-- Stamp badge at bottom left -->
+            <div class="stamp-badge text-brick absolute -bottom-2 -left-1 sm:-bottom-3 sm:-left-3 z-30 bg-paper px-3 py-1 text-[10px] -rotate-6 shadow-[2px_2px_0_#B31E5C] pointer-events-none">
+              <span>FIELD TESTED &bull; BANGALORE</span>
+            </div>
+
+            <!-- Fun decorative backdrop layer -->
+            <div class="absolute -inset-2 rounded-3xl bg-indigo/15 border-2 border-dashed border-ink/40 rotate-2 pointer-events-none"></div>
+
+            <div class="editorial-card rounded-3xl p-3 sm:p-3.5 bg-white relative">
+              <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-cream border-[1.5px] border-ink relative flex items-center justify-center">
+                <img src="assets/self.jpg" alt="Portrait of Apoorva Sahu"
+                     class="w-full h-full object-cover object-center"
+                     onerror="this.style.display='none'; document.getElementById('portrait-fallback').classList.remove('hidden');">
+
+                <!-- Graceful Fallback until assets/self.jpg is uploaded -->
+                <div id="portrait-fallback" class="hidden flex-col items-center justify-center text-center p-6 w-full h-full bg-cream">
+                  <div class="w-24 h-24 rounded-full bg-brick text-paper font-display font-bold text-3xl flex items-center justify-center border-2 border-ink mb-4 shadow-[3px_3px_0_#111418]">
+                    AS
+                  </div>
+                  <p class="font-display font-bold text-lg text-ink">Apoorva Sahu</p>
+                  <p class="text-xs font-mono text-muted mt-1">Drop photo at <code class="bg-white px-1.5 py-0.5 rounded border border-ink/20">assets/self.jpg</code></p>
+                </div>
+              </div>
+
+              <!-- Polaroid footer -->
+              <div class="pt-3.5 pb-1 px-1 flex items-center justify-between gap-2">
+                <div>
+                  <p class="font-display font-bold text-sm text-ink">Apoorva Sahu</p>
+                  <p class="text-xs text-muted">Marketer, home cook</p>
+                </div>
+                <span class="sticker-pill px-2.5 py-1 rounded-full bg-violet text-white text-[11px] font-mono font-bold -rotate-2">
+                  Class of '27
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- PLAYFUL TICKER RIBBON -->
+    <div class="border-y-2 border-ink bg-ink overflow-hidden py-2.5 ticker-wrap" aria-hidden="true">
+      <div class="ticker-track font-mono text-xs font-semibold uppercase tracking-widest text-lilac flex items-center gap-6">
+        <span>Showroom Floor Objections</span><span>&bull;</span>
+        <span>Kitchen Experiment Prototyping</span><span>&bull;</span>
+        <span>700+ Lifecycle Email Campaigns</span><span>&bull;</span>
+        <span>Dissecting Blinkit Push Copy</span><span>&bull;</span>
+        <span>Bottom-Up Unit Economics</span><span>&bull;</span>
+        <span>Cinema Pacing &amp; Visual Rhythm</span><span>&bull;</span>
+        <span>₹20L+ High-Ticket Close Rate</span><span>&bull;</span>
+        <span>Showroom Floor Objections</span><span>&bull;</span>
+        <span>Kitchen Experiment Prototyping</span><span>&bull;</span>
+        <span>700+ Lifecycle Email Campaigns</span><span>&bull;</span>
+        <span>Dissecting Blinkit Push Copy</span><span>&bull;</span>
+        <span>Bottom-Up Unit Economics</span><span>&bull;</span>
+        <span>Cinema Pacing &amp; Visual Rhythm</span><span>&bull;</span>
+        <span>₹20L+ High-Ticket Close Rate</span><span>&bull;</span>
+      </div>
     </div>
 
-    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight sm:leading-tight mb-6">
-      Translating <span class="bg-gradient-to-r from-violet-400 via-indigo-300 to-cyan-400 bg-clip-text text-transparent">Technical Rigor</span> into Revenue-Driving Marketing Engines.
-    </h1>
+    <!-- WHO I AM + COMPACT PROOF STRIP -->
+    <section id="story" class="pt-20 pb-24 px-5 sm:px-6 max-w-6xl mx-auto">
+      <div class="editorial-card rounded-3xl p-6 sm:p-10 bg-white relative">
+        <!-- Tactile washi tape at top -->
+        <div class="washi-tape washi-tape-plum absolute -top-3 left-10 z-10 w-28 h-5 rotate-1 pointer-events-none"></div>
 
-    <p class="max-w-2xl mx-auto text-slate-400 text-base sm:text-lg leading-relaxed mb-10">
-      Combining engineering problem-solving with commercial MBA frameworks. Experienced across <strong class="text-slate-200">GTM Product Marketing</strong>, Fortune 500 <strong class="text-slate-200">Lifecycle Operations</strong>, and high-ticket <strong class="text-slate-200">D2C Brand Conversion</strong>.
-    </p>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-5">
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-ink leading-tight">
+              Marketing built on customer friction,<br class="hidden sm:block">
+              <span class="text-brick">not desk assumptions.</span>
+            </h2>
+          </div>
 
-    <!-- CTAs -->
-    <div class="flex flex-wrap items-center justify-center gap-4">
-      <a href="#work" class="px-6 py-3 bg-white text-slate-950 font-bold rounded-xl shadow-xl hover:bg-slate-200 transition-all flex items-center gap-2">
-        <span>Explore Case Studies</span>
-        <i data-lucide="arrow-down" class="w-4 h-4"></i>
-      </a>
-      <button onclick="copyEmail()" class="px-6 py-3 glass-card text-slate-200 hover:text-white font-medium rounded-xl transition-all flex items-center gap-2" id="copyBtn">
-        <i data-lucide="copy" class="w-4 h-4"></i>
-        <span>Copy Email</span>
-      </button>
-    </div>
+          <div class="lg:col-span-7 space-y-4 text-sm sm:text-base text-muted leading-relaxed">
+            <p>
+              A lot of marketers learn consumer psychology from textbooks or dashboards. I learned it standing on the showroom floor at Frootle in Bangalore, looking high-net-worth buyers in the eye and discovering why someone hesitates before spending ₹80,000 on a smart espresso machine or robot vacuum. Navigating that friction face-to-face delivered <strong class="text-ink font-semibold">₹20L+ in direct revenue with a 45% consultative close rate</strong>.
+            </p>
+            <p>
+              My Computer Science foundation from <strong class="text-ink font-semibold">KIIT (9.38 CGPA)</strong> gave me the systems discipline to take those qualitative human truths and scale them: architecting B2B SaaS ROI battlecards at <strong class="text-ink font-semibold">HighRadius</strong>, governing 700+ lifecycle email campaigns with agile Scrum PODs for a <strong class="text-ink font-semibold">Fortune 500 financial leader</strong>, and modeling 4-tier AR monetization from primary research. Currently completing my <strong class="text-ink font-semibold">MBA in Marketing at NMIMS Bengaluru</strong>.
+            </p>
+          </div>
+        </div>
 
-    <!-- CREDIBILITY METRICS BAR -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20 pt-10 border-t border-white/5">
-      <div class="glass-card p-5 rounded-2xl text-left border-l-4 border-l-amber-500">
-        <div class="text-2xl sm:text-3xl font-extrabold text-amber-400">₹20L+</div>
-        <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">D2C Direct Revenue</div>
-        <div class="text-[11px] text-slate-500 mt-0.5">45% Consultative Conversion</div>
+        <!-- Compact Editorial Proof Strip -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 mt-8 pt-8 border-t-2 border-ink/10">
+          <div class="p-3 sm:p-3.5 rounded-xl bg-cream/70 border border-ink/15">
+            <div class="flex items-center justify-between gap-1">
+              <div class="font-display text-xl sm:text-2xl font-bold text-ink tabular-nums">₹20L+</div>
+              <span class="stamp-badge hidden sm:inline-flex text-brick text-[9px] px-1.5 py-0.5 bg-white -rotate-3">VERIFIED</span>
+            </div>
+            <div class="text-[11px] sm:text-xs font-semibold text-brick mt-0.5">Direct D2C Revenue</div>
+            <div class="text-[10px] sm:text-[11px] text-muted mt-0.5">45% consultative close rate</div>
+          </div>
+          <div class="p-3 sm:p-3.5 rounded-xl bg-cream/70 border border-ink/15">
+            <div class="flex items-center justify-between gap-1">
+              <div class="font-display text-xl sm:text-2xl font-bold text-ink tabular-nums">700+</div>
+              <span class="stamp-badge hidden sm:inline-flex text-plum text-[9px] px-1.5 py-0.5 bg-white rotate-2">VERIFIED</span>
+            </div>
+            <div class="text-[11px] sm:text-xs font-semibold text-plum mt-0.5">Lifecycle Campaigns</div>
+            <div class="text-[10px] sm:text-[11px] text-muted mt-0.5">24% open rate (~18% avg)</div>
+          </div>
+          <div class="p-3 sm:p-3.5 rounded-xl bg-cream/70 border border-ink/15">
+            <div class="font-display text-xl sm:text-2xl font-bold text-ink tabular-nums">5 Personas</div>
+            <div class="text-[11px] sm:text-xs font-semibold text-wine mt-0.5">AR Pricing Model</div>
+            <div class="text-[10px] sm:text-[11px] text-muted mt-0.5">N=60 primary research study</div>
+          </div>
+          <div class="p-3 sm:p-3.5 rounded-xl bg-cream/70 border border-ink/15">
+            <div class="font-display text-xl sm:text-2xl font-bold text-ink tabular-nums">50+</div>
+            <div class="text-[11px] sm:text-xs font-semibold text-indigo mt-0.5">Brand Partners</div>
+            <div class="text-[10px] sm:text-[11px] text-muted mt-0.5">Coca-Cola, RVCJ &amp; Markopolis</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES SECTION: MY WORK + TEAR-DOWNS I ADMIRE -->
+    <section id="work" class="py-16 sm:py-20 px-5 sm:px-6 max-w-6xl mx-auto">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+        <div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-ink">Selected Work &amp; Tear-Downs</h2>
+          <p class="text-sm text-muted mt-1">Four commercial deep dives I&rsquo;ve executed, plus brand tear-downs I study for inspiration.</p>
+        </div>
+
+        <!-- Primary View Switcher: My Work vs Tear-Downs I Admire -->
+        <div class="flex p-1 rounded-xl bg-cream border-[1.5px] border-ink w-full sm:w-fit" role="tablist" aria-label="Case study views">
+          <button type="button" role="tab" id="tab-btn-mine" aria-controls="tab-mine" aria-selected="true" onclick="switchCaseTab('mine', this)"
+                  class="case-tab-btn flex-1 sm:flex-none min-h-11 px-2 sm:px-4 rounded-lg text-[11px] sm:text-xs font-bold bg-ink text-paper transition-colors">
+            <span class="sm:hidden">My Work (4)</span><span class="hidden sm:inline">My Work (4 Projects)</span>
+          </button>
+          <button type="button" role="tab" id="tab-btn-admired" aria-controls="tab-admired" aria-selected="false" onclick="switchCaseTab('admired', this)"
+                  class="case-tab-btn flex-1 sm:flex-none min-h-11 px-2 sm:px-4 rounded-lg text-[11px] sm:text-xs font-bold text-ink/70 hover:text-ink transition-colors">
+            <span class="sm:hidden">Tear-Downs (3)</span><span class="hidden sm:inline">Market Tear-Downs (3 Brands)</span>
+          </button>
+        </div>
       </div>
 
-      <div class="glass-card p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
-        <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400">700+</div>
-        <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Lifecycle Campaigns</div>
-        <div class="text-[11px] text-slate-500 mt-0.5">24% Open Rate (+33% over avg)</div>
+      <!-- TAB 1: MY WORK -->
+      <div id="tab-mine" role="tabpanel" aria-labelledby="tab-btn-mine">
+        <!-- Role Filter Chips -->
+        <div class="flex flex-wrap items-center gap-2 mb-8" id="filterTabs">
+          <button type="button" aria-pressed="true" onclick="filterWork('all', this)"
+                  class="filter-btn min-h-11 px-3.5 py-2 rounded-full text-[11px] sm:text-xs font-bold border-[1.5px] border-ink bg-violet text-white transition-colors">
+            All Work
+          </button>
+          <button type="button" aria-pressed="false" onclick="filterWork('pmm', this)"
+                  class="filter-btn min-h-11 px-3.5 py-2 rounded-full text-[11px] sm:text-xs font-bold border-[1.5px] border-ink bg-white text-ink hover:bg-cream transition-colors">
+            Product Marketing
+          </button>
+          <button type="button" aria-pressed="false" onclick="filterWork('perf', this)"
+                  class="filter-btn min-h-11 px-3.5 py-2 rounded-full text-[11px] sm:text-xs font-bold border-[1.5px] border-ink bg-white text-ink hover:bg-cream transition-colors">
+            Performance &amp; Ops
+          </button>
+          <button type="button" aria-pressed="false" onclick="filterWork('brand', this)"
+                  class="filter-btn min-h-11 px-3.5 py-2 rounded-full text-[11px] sm:text-xs font-bold border-[1.5px] border-ink bg-white text-ink hover:bg-cream transition-colors">
+            Brand &amp; D2C
+          </button>
+        </div>
+
+        <!-- 4 Case Study Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+
+          <!-- Case 1: PMM -->
+          <article class="case-card editorial-card rounded-2xl flex flex-col justify-between overflow-hidden" data-category="pmm">
+            <div class="p-5 sm:p-7">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-wine/10 text-wine border border-wine/30">
+                  Product Marketing &bull; GTM
+                </span>
+                <span class="stamp-badge text-wine text-[10px] px-2 py-0.5 bg-paper -rotate-2">N=60 STUDY</span>
+              </div>
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-ink mb-3">
+                Augmented Reality GTM &amp; 4-Tier Monetization Plan
+              </h3>
+              <p class="text-sm text-muted leading-relaxed mb-5">
+                Enterprise studios charged $2k&ndash;$20k per AR filter, locking out 99% of creators and SMBs. Built a template-first penetration model across 5 personas backed by bottom-up unit economics.
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-cream text-ink border border-ink/15">AliveNow Benchmark</span>
+                <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-cream text-ink border border-ink/15">4-Tier Pricing</span>
+                <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-cream text-ink border border-ink/15">10%&ndash;25% Margins</span>
+              </div>
+            </div>
+            <div class="px-5 sm:px-7 py-4 bg-cream/60 border-t-[1.5px] border-ink flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3">
+              <span class="text-xs font-mono font-semibold text-ink">₹440 &ndash; ₹12,250 tiers</span>
+              <button type="button" onclick="openModal('pmm-modal', this)"
+                      class="text-xs font-bold text-wine hover:underline min-h-11 w-full sm:w-auto justify-center inline-flex items-center gap-1">
+                <span>Open Breakdown</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Case 2: Performance & Ops -->
+          <article class="case-card editorial-card rounded-2xl flex flex-col justify-between overflow-hidden" data-category="perf">
+            <div class="p-5 sm:p-7">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-plum/10 text-plum border border-plum/30">
+                  Performance &bull; Marketing Ops
+                </span>
+                <span class="text-xs font-mono text-muted">Fortune 500</span>
+              </div>
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-ink mb-3">
+                Enterprise Lifecycle Email Engine &amp; Agile Ops Protocol
+              </h3>
+              <p class="text-sm text-muted leading-relaxed mb-5">
+                Executed 700+ lifecycle &amp; promotional emails using Epsilon and Adobe Workfront (24% open rate, 2.5% CTR), and replaced waterfall bottlenecks with Scrum PODs and a 2-call escalation cap.
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-cream text-ink border border-ink/15">Epsilon Suite</span>
+                <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-cream text-ink border border-ink/15">Adobe Workfront</span>
+                <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-cream text-ink border border-ink/15">~300 Pilot QA</span>
+              </div>
+            </div>
+            <div class="px-5 sm:px-7 py-4 bg-cream/60 border-t-[1.5px] border-ink flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3">
+              <span class="text-xs font-mono font-semibold text-ink">24% Open (+33% vs avg)</span>
+              <button type="button" onclick="openModal('perf-modal', this)"
+                      class="text-xs font-bold text-plum hover:underline min-h-11 w-full sm:w-auto justify-center inline-flex items-center gap-1">
+                <span>Open Breakdown</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Case 3: Brand & High-Ticket D2C -->
+          <article class="case-card editorial-card rounded-2xl flex flex-col justify-between overflow-hidden" data-category="brand">
+            <div class="p-5 sm:p-7">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-brick/10 text-brick border border-brick/30">
+                  Brand CX &bull; High-Ticket D2C
+                </span>
+                <span class="stamp-badge text-brick text-[10px] px-2 py-0.5 bg-paper rotate-2">IN-STORE TESTED</span>
+              </div>
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-ink mb-3">
+                Luxury Appliance Experiential CX &amp; 7-Step Funnel
+              </h3>
+              <p class="text-sm text-muted leading-relaxed mb-5">
+                Turned skeptical "webroomers" into buyers for ₹25K&ndash;₹80K+ smart brands (ECOVACS, De&rsquo;Longhi, XGIMI, DJI) at HSR Bangalore via sensory demos and instant WhatsApp onboarding.
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-cream text-ink border border-ink/15">7-Step Journey</span>
+                <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-cream text-ink border border-ink/15">Sensory Demos</span>
+                <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-cream text-ink border border-ink/15">Same-Day Onboarding</span>
+              </div>
+            </div>
+            <div class="px-5 sm:px-7 py-4 bg-cream/60 border-t-[1.5px] border-ink flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3">
+              <span class="text-xs font-mono font-semibold text-ink">₹20L+ &bull; 45% Close Rate</span>
+              <button type="button" onclick="openModal('brand-modal', this)"
+                      class="text-xs font-bold text-brick hover:underline min-h-11 w-full sm:w-auto justify-center inline-flex items-center gap-1">
+                <span>Open Breakdown</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Case 4: Brand Architecture & Growth -->
+          <article class="case-card editorial-card rounded-2xl flex flex-col justify-between overflow-hidden" data-category="brand">
+            <div class="p-5 sm:p-7">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-indigo/10 text-indigo border border-indigo/30">
+                  Brand Architecture &bull; Growth
+                </span>
+                <span class="text-xs font-mono text-muted">AIESEC &amp; Margene</span>
+              </div>
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-ink mb-3">
+                Sensory Brand Governance, Global Proof &amp; Partnerships
+              </h3>
+              <p class="text-sm text-muted leading-relaxed mb-5">
+                Unified chapters around sensory city identities (&ldquo;The Feeling of Serenity&rdquo;), built a 5-country testimonial gazette, co-branded Coca-Cola &amp; RVCJ Media, and scaled Markopolis outreach across 50+ sponsors.
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-cream text-ink border border-ink/15">5-Country Proof</span>
+                <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-cream text-ink border border-ink/15">Coca-Cola &times; RVCJ</span>
+                <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-cream text-ink border border-ink/15">50+ Partners</span>
+              </div>
+            </div>
+            <div class="px-5 sm:px-7 py-4 bg-cream/60 border-t-[1.5px] border-ink flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3">
+              <span class="text-xs font-mono font-semibold text-ink">1,000+ Registrations</span>
+              <button type="button" onclick="openModal('campaign-modal', this)"
+                      class="text-xs font-bold text-indigo hover:underline min-h-11 w-full sm:w-auto justify-center inline-flex items-center gap-1">
+                <span>Open Breakdown</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Bridge banner to Tab 2 so tear-downs are easily discovered -->
+        <div class="mt-7 p-4 sm:p-5 rounded-2xl bg-white border-[1.5px] border-ink flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-[2px_2px_0_#111418]">
+          <div class="flex items-center gap-3">
+            <span class="p-2 rounded-xl bg-violet text-white border border-ink shrink-0">
+              <i data-lucide="bookmark" class="w-4 h-4"></i>
+            </span>
+            <div>
+              <p class="text-xs font-bold text-ink">Curious how I break down external brand strategy?</p>
+              <p class="text-[11px] text-muted mt-0.5">Explore my tear-downs of Duolingo&rsquo;s mascot loop, Paper Boat&rsquo;s nostalgia packaging, and Nothing Phone&rsquo;s transparent launch.</p>
+            </div>
+          </div>
+          <button type="button" onclick="switchCaseTab('admired', document.getElementById('tab-btn-admired'))"
+                  class="editorial-card px-4 py-2 min-h-11 w-full sm:w-auto justify-center sm:justify-start rounded-xl bg-ink text-paper text-xs font-bold font-mono hover:bg-brick transition-colors shrink-0 flex items-center gap-1.5">
+            <span>View 3 Tear-Downs</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Compact Bonus Callout: HighRadius B2B SaaS -->
+        <div class="mt-4 p-5 rounded-2xl bg-cream border-[1.5px] border-ink flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-3">
+            <span class="p-2 rounded-lg bg-white border border-ink text-ink shrink-0">
+              <i data-lucide="briefcase" class="w-4 h-4"></i>
+            </span>
+            <div>
+              <p class="text-sm font-bold text-ink">Also built B2B SaaS Sales Enablement at HighRadius</p>
+              <p class="text-xs text-muted mt-0.5">Created enterprise account research, competitor battlecards, and Cost-Benefit ROI business cases to justify B2B SaaS adoption.</p>
+            </div>
+          </div>
+          <span class="font-mono text-[11px] px-2.5 py-1 rounded bg-white border border-ink/20 text-ink shrink-0 w-fit">Jul &ndash; Sep 2022</span>
+        </div>
       </div>
 
-      <div class="glass-card p-5 rounded-2xl text-left border-l-4 border-l-violet-500">
-        <div class="text-2xl sm:text-3xl font-extrabold text-violet-400">5 Personas</div>
-        <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">GTM Pricing Model</div>
-        <div class="text-[11px] text-slate-500 mt-0.5">4-Tier Penetration Framework</div>
+      <!-- TAB 2: CASE STUDIES / TEAR-DOWNS I ADMIRE -->
+      <div id="tab-admired" class="hidden" role="tabpanel" aria-labelledby="tab-btn-admired">
+        <div class="mb-6 p-4 rounded-xl bg-cream border-[1.5px] border-dashed border-ink/50 text-xs text-muted flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="bookmark" class="w-4 h-4 text-brick shrink-0"></i>
+            <span><strong class="text-ink">External Market Tear-Downs:</strong> Brands and GTM plays I study for inspiration; not my own projects, just sharp marketing I love breaking down.</span>
+          </div>
+          <button type="button" onclick="switchCaseTab('mine', document.getElementById('tab-btn-mine'))"
+                  class="editorial-card px-3 py-1.5 min-h-11 rounded-lg bg-white text-xs font-mono font-bold text-ink hover:bg-violet hover:text-white shrink-0">
+            &larr; Back to My Work
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- TODO-SWAP 1 -->
+          <article class="editorial-card rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-plum/15 text-plum border border-plum/30 mb-3">
+                Retention &amp; Brand Voice
+              </span>
+              <h3 class="font-display text-xl font-bold text-ink mb-2">Duolingo&rsquo;s Character-Led Growth Loop</h3>
+              <p class="text-sm text-muted leading-relaxed mb-4">
+                Turned dry notification reminders into a cultural meme. The lesson: when your product has a repeatable daily habit, <strong class="text-ink">brand personality becomes a free acquisition channel</strong>.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-ink/10 text-[11px] font-mono text-muted">Takeaway: Mascot as distribution</div>
+          </article>
+
+          <!-- TODO-SWAP 2 -->
+          <article class="editorial-card rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-brick/15 text-brick border border-brick/30 mb-3">
+                Category Creation &amp; Packaging
+              </span>
+              <h3 class="font-display text-xl font-bold text-ink mb-2">Paper Boat&rsquo;s Nostalgia Positioning</h3>
+              <p class="text-sm text-muted leading-relaxed mb-4">
+                Never competed with colas on fizz or price. Owned an emotional monopoly (&ldquo;childhood memories&rdquo;) and made the tactile pouch itself carry the brand story on crowded shelves.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-ink/10 text-[11px] font-mono text-muted">Takeaway: Emotion beats spec wars</div>
+          </article>
+
+          <!-- TODO-SWAP 3 -->
+          <article class="editorial-card rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-indigo/15 text-indigo border border-indigo/30 mb-3">
+                Hardware GTM &amp; Community
+              </span>
+              <h3 class="font-display text-xl font-bold text-ink mb-2">Nothing Phone&rsquo;s Transparent Launch</h3>
+              <p class="text-sm text-muted leading-relaxed mb-4">
+                Used industrial design transparency and invite-only scarcity to spark earned tech media before spending big on paid acquisition; classic PMM product-market theater.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-ink/10 text-[11px] font-mono text-muted">Takeaway: Design as GTM hook</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREATIVE SWIPE FILE + CAMPAIGNS I LOVE -->
+    <section id="creative" class="py-16 sm:py-20 px-5 sm:px-6 max-w-6xl mx-auto border-t-2 border-ink/10">
+      <div class="mb-10">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-ink">Creative Work &amp; Favorite Campaigns</h2>
+        <p class="text-sm text-muted mt-1">Posters and booklets I designed, plus brand collaborations I find genuinely brilliant.</p>
       </div>
 
-      <div class="glass-card p-5 rounded-2xl text-left border-l-4 border-l-cyan-500">
-        <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400">1,000+</div>
-        <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Student Registrations</div>
-        <div class="text-[11px] text-slate-500 mt-0.5">Coca-Cola & RVCJ Collabs</div>
-      </div>
-    </div>
-  </header>
+      <!-- PART A: DESIGNED BY ME -->
+      <div class="mb-14">
+        <div class="flex items-center justify-between mb-5">
+          <h3 class="font-display text-xl font-bold text-ink flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-brick border border-ink"></span>
+            <span>Campaigns &amp; Collateral I Designed</span>
+          </h3>
+          <span class="text-xs font-mono text-muted hidden sm:inline">Click any card to inspect</span>
+        </div>
 
-  <!-- FEATURED WORK SECTION -->
-  <section id="work" class="py-20 px-6 max-w-6xl mx-auto">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Creative 1: RVCJ Post (1080x1080 Square) -->
+          <button type="button"
+                  onclick="openLightbox('assets/rvcj-post.png', 'Youth Speak Forum × Coca-Cola × RVCJ Media', 'Official 1080×1080 co-branded promotional poster pairing Coca-Cola and RVCJ Media (15M+ reach).', this)"
+                  class="editorial-card rounded-2xl p-3.5 text-left group flex flex-col justify-between bg-white">
+            <div>
+              <div class="aspect-square rounded-xl overflow-hidden bg-cream border border-ink/20 mb-3 relative">
+                <img src="assets/rvcj-post.png" alt="Coca-Cola Youth Speak Forum poster featuring RVCJ Media"
+                     class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                     onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden w-full h-full flex-col items-center justify-center p-4 text-center bg-ink text-paper">
+                  <span class="text-[10px] font-mono uppercase tracking-wider text-lilac mb-1">Coca-Cola &times; RVCJ</span>
+                  <span class="font-display font-bold text-base">Youth Speak Forum</span>
+                  <span class="text-[10px] font-mono opacity-75 mt-2">assets/rvcj-post.png</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-sm text-ink group-hover:text-brick transition-colors">Youth Speak Forum &times; RVCJ</h4>
+              <p class="text-xs text-muted mt-1 leading-relaxed">Co-branded social poster uniting Coca-Cola, AIESEC, and RVCJ Media.</p>
+            </div>
+            <span class="mt-3 text-[11px] font-mono font-semibold text-brick inline-flex items-center gap-1">
+              Zoom Poster <i data-lucide="maximize-2" class="w-3 h-3"></i>
+            </span>
+          </button>
+
+          <!-- Creative 2: Bhubaneswar City Serenity Banner (Replaced linkedin.png per request) -->
+          <button type="button"
+                  onclick="openLightbox('assets/bhubaneswar-banner.png', 'Bhubaneswar Sensory Brand Banner', 'City positioning creative anchored around &ldquo;The feeling of serenity&rdquo; for local chapter brand governance.', this)"
+                  class="editorial-card rounded-2xl p-3.5 text-left group flex flex-col justify-between bg-white">
+            <div>
+              <div class="aspect-square rounded-xl overflow-hidden bg-ink border border-ink/20 mb-3 relative flex items-center justify-center">
+                <img src="assets/bhubaneswar-banner.png" alt="Bhubaneswar city scenic banner: A city where dream meets vision, The feeling of serenity"
+                     class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                     onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden w-full h-full flex-col items-center justify-center p-4 text-center bg-ink text-paper">
+                  <span class="text-[10px] font-mono uppercase tracking-wider text-lilac mb-1">Brand Positioning</span>
+                  <span class="font-display font-bold text-base">The Feeling of Serenity</span>
+                  <span class="text-[10px] font-mono opacity-75 mt-2">assets/bhubaneswar-banner.png</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-sm text-ink group-hover:text-brick transition-colors">Bhubaneswar Brand Banner</h4>
+              <p class="text-xs text-muted mt-1 leading-relaxed">Sensory city identity creative (&ldquo;A city where dream meets vision&rdquo;).</p>
+            </div>
+            <span class="mt-3 text-[11px] font-mono font-semibold text-indigo inline-flex items-center gap-1">
+              Zoom Creative <i data-lucide="maximize-2" class="w-3 h-3"></i>
+            </span>
+          </button>
+
+          <!-- Creative 3: EP Testimonial Gazette (1440x810 16:9) -->
+          <button type="button"
+                  onclick="openLightbox('assets/ep-gazette-cover.png', 'EP Testimonial Gazette (15-Page Booklet)', 'Global social proof booklet spanning exchange stories from Bahrain, Japan, Russia, Spain, and Kenya.', this, 'assets/ep-testimonial-booklet.pdf')"
+                  class="editorial-card rounded-2xl p-3.5 text-left group flex flex-col justify-between bg-white">
+            <div>
+              <div class="aspect-square rounded-xl overflow-hidden bg-cream border border-ink/20 mb-3 relative flex items-center justify-center">
+                <img src="assets/ep-gazette-cover.png" alt="EP Testimonial Gazette cover"
+                     class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                     onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden w-full h-full flex-col items-center justify-center p-4 text-center bg-wine text-paper">
+                  <span class="text-[10px] font-mono uppercase tracking-wider text-paper/90 mb-1">15-Page Gazette</span>
+                  <span class="font-display font-bold text-base">EP Testimonial Booklet</span>
+                  <span class="text-[10px] font-mono opacity-75 mt-2">assets/ep-gazette-cover.png</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-sm text-ink group-hover:text-brick transition-colors">EP Testimonial Gazette</h4>
+              <p class="text-xs text-muted mt-1 leading-relaxed">5-country narrative booklet mapped across a 4-stage email funnel.</p>
+            </div>
+            <span class="mt-3 text-[11px] font-mono font-semibold text-wine inline-flex items-center gap-1">
+              Zoom Cover <i data-lucide="maximize-2" class="w-3 h-3"></i>
+            </span>
+          </button>
+
+          <!-- Creative 4: NSS Covaxin Public Health Carousel (1:1) -->
+          <button type="button"
+                  onclick="openLightbox('assets/covaxin-1.png', 'NSS Public Health Carousel - Know Your Vaccine', '6-slide educational carousel designed to simplify vaccine efficacy, dosage, and safety info for community outreach.', this)"
+                  class="editorial-card rounded-2xl p-3.5 text-left group flex flex-col justify-between bg-white">
+            <div>
+              <div class="aspect-square rounded-xl overflow-hidden bg-cream border border-ink/20 mb-3 relative">
+                <img src="assets/covaxin-1.png" alt="Know Your Vaccine educational carousel cover"
+                     class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                     onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden w-full h-full flex-col items-center justify-center p-4 text-center bg-plum text-paper">
+                  <span class="text-[10px] font-mono uppercase tracking-wider text-paper/90 mb-1">NSS Outreach</span>
+                  <span class="font-display font-bold text-base">Know Your Vaccine</span>
+                  <span class="text-[10px] font-mono opacity-75 mt-2">assets/covaxin-1.png</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-sm text-ink group-hover:text-brick transition-colors">NSS Public Health Series</h4>
+              <p class="text-xs text-muted mt-1 leading-relaxed">6-slide visual explainer translating medical facts into readable social cards.</p>
+            </div>
+            <span class="mt-3 text-[11px] font-mono font-semibold text-plum inline-flex items-center gap-1">
+              Zoom Slide <i data-lucide="maximize-2" class="w-3 h-3"></i>
+            </span>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- PART B: CAMPAIGNS & COLLABS I FIND COOL (TODO-SWAP: Swap with your personal favorites) -->
       <div>
-        <h2 class="text-3xl font-bold tracking-tight text-white mb-2">Featured Work & Case Studies</h2>
-        <p class="text-slate-400 text-sm">Real-world commercial impact, GTM models, and operational frameworks.</p>
-      </div>
-
-      <!-- Filter Tabs -->
-      <div class="flex flex-wrap gap-2 p-1 bg-white/5 rounded-xl border border-white/5 w-fit" id="filterTabs">
-        <button onclick="filterWork('all')" class="filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white/10 text-white transition-all">All</button>
-        <button onclick="filterWork('pmm')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all">Product Marketing</button>
-        <button onclick="filterWork('perf')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all">Performance & Ops</button>
-        <button onclick="filterWork('brand')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all">Brand & D2C</button>
-      </div>
-    </div>
-
-    <!-- Case Studies Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="caseStudiesGrid">
-
-      <!-- CASE STUDY 1: PMM (VIOLET PALETTE) -->
-      <div class="case-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between transition-all hover:-translate-y-1 group" data-category="pmm">
-        <div class="p-8">
-          <div class="flex items-center justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-violet-500/10 text-violet-400 border border-violet-500/30">
-              Product Marketing &bull; GTM
-            </span>
-            <span class="text-xs text-slate-400 flex items-center gap-1 font-mono">
-              <i data-lucide="layers" class="w-3.5 h-3.5"></i> Pricing & Research
-            </span>
-          </div>
-
-          <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">
-            Augmented Reality GTM & 4-Tier Monetization Strategy
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-5">
+          <h3 class="font-display text-xl font-bold text-ink flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-indigo border border-ink"></span>
+            <span>Campaigns &amp; Collabs I Find Cool</span>
           </h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-6">
-            Broke down the prohibitive $2k–$20k enterprise studio monopoly by architecting an accessible, template-driven AR pricing architecture. Formulated 5 customer personas and a 4-tier cost-plus penetration model backed by primary market research (N=60).
-          </p>
-
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300 font-mono">Competitor Benchmarking</span>
-            <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300 font-mono">AliveNow Analysis</span>
-            <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300 font-mono">Cost-Plus Margins</span>
-          </div>
+          <span class="text-xs font-mono text-muted">Curated inspiration board &bull; Why I think they worked</span>
         </div>
 
-        <div class="px-8 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
-          <div class="text-xs text-slate-400 font-semibold">Margins: <span class="text-violet-400">10% – 25%</span></div>
-          <button onclick="openModal('pmm-modal')" class="text-xs font-bold text-violet-400 hover:text-violet-300 flex items-center gap-1.5 group-hover:gap-2 transition-all">
-            <span>Read Strategy Breakdown</span>
-            <i data-lucide="chevron-right" class="w-4 h-4"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- CASE STUDY 2: PERFORMANCE & OPS (EMERALD PALETTE) -->
-      <div class="case-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between transition-all hover:-translate-y-1 group" data-category="perf">
-        <div class="p-8">
-          <div class="flex items-center justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-              Performance &bull; Marketing Ops
-            </span>
-            <span class="text-xs text-slate-400 flex items-center gap-1 font-mono">
-              <i data-lucide="mail" class="w-3.5 h-3.5"></i> Fortune 500
-            </span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Campaign 1 -->
+          <div class="editorial-card rounded-2xl p-6 bg-indigo text-white">
+            <span class="inline-block px-2.5 py-0.5 rounded bg-violet text-white font-mono text-[10px] font-bold uppercase mb-3">Cultural Co-Branding</span>
+            <h4 class="font-display text-lg font-bold mb-2 text-white">Zomato &times; Blinkit Outdoor Billboards</h4>
+            <p class="text-xs text-white/95 leading-relaxed">
+              &ldquo;Doodh mangoge, kheer denge.&rdquo; Turned two delivery apps into a witty street-level comedy dialogue; proof that hyper-local cultural timing and bold color blocking outperform high-budget TV spots.
+            </p>
           </div>
 
-          <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-emerald-300 transition-colors">
-            Enterprise Lifecycle Email Engine & Agile Operations Framework
-          </h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-6">
-            Managed end-to-end execution of 700+ email campaigns delivering a 24% open rate (vs. ~18% industry benchmark). Diagnosed multi-team waterfall handoff delays and engineered an Agile Scrum framework with a 2-call maximum escalation cap.
-          </p>
-
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300 font-mono">700+ Campaigns</span>
-            <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300 font-mono">Epsilon Suite</span>
-            <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300 font-mono">Adobe Workfront</span>
-            <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300 font-mono">Pilot QA Testing</span>
-          </div>
-        </div>
-
-        <div class="px-8 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
-          <div class="text-xs text-slate-400 font-semibold">Open Rate: <span class="text-emerald-400">24% (2.5% CTR)</span></div>
-          <button onclick="openModal('perf-modal')" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5 group-hover:gap-2 transition-all">
-            <span>Read Operations Breakdown</span>
-            <i data-lucide="chevron-right" class="w-4 h-4"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- CASE STUDY 3: BRAND CX & HIGH-TICKET D2C (AMBER PALETTE) -->
-      <div class="case-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between transition-all hover:-translate-y-1 group" data-category="brand">
-        <div class="p-8">
-          <div class="flex items-center justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/30">
-              Brand Marketing &bull; Omnichannel CX
-            </span>
-            <span class="text-xs text-slate-400 flex items-center gap-1 font-mono">
-              <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i> Frootle India
-            </span>
+          <!-- Campaign 2 -->
+          <div class="editorial-card rounded-2xl p-6 bg-brick text-white">
+            <span class="inline-block px-2.5 py-0.5 rounded bg-paper text-ink font-mono text-[10px] font-bold uppercase mb-3">Moment Marketing</span>
+            <h4 class="font-display text-lg font-bold mb-2 text-white">Amul Topical Archive</h4>
+            <p class="text-xs text-white/95 leading-relaxed">
+              Fifty-plus years of real-time cultural commentary with zero drift in brand character. The ultimate blueprint for turning real-time topical hooks into lasting brand equity.
+            </p>
           </div>
 
-          <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-amber-300 transition-colors">
-            High-Ticket D2C Experiential Marketing & Consultative Sales Engine
-          </h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-6">
-            Drove ₹20L+ in direct revenue across premium global smart appliance brands (ECOVACS, De'Longhi, DJI, Tineco, XGIMI) at HSR Bangalore. Operationalized a 7-step consultative journey yielding a 45% conversion rate on ₹25K–₹80K ticket items.
-          </p>
-
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300 font-mono">7-Step Framework</span>
-            <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300 font-mono">Sensory Demos</span>
-            <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300 font-mono">Post-Purchase Retention</span>
+          <!-- Campaign 3 -->
+          <div class="editorial-card rounded-2xl p-6 bg-plum text-white">
+            <span class="inline-block px-2.5 py-0.5 rounded bg-violet text-white font-mono text-[10px] font-bold uppercase mb-3">Product-as-Media</span>
+            <h4 class="font-display text-lg font-bold mb-2 text-white">Spotify Wrapped</h4>
+            <p class="text-xs text-white/95 leading-relaxed">
+              Transformed private streaming telemetry into annual vanity cards users share voluntarily. The gold standard for turning product analytics into viral brand storytelling.
+            </p>
           </div>
         </div>
-
-        <div class="px-8 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
-          <div class="text-xs text-slate-400 font-semibold">Conversion: <span class="text-amber-400">45% Close Rate</span></div>
-          <button onclick="openModal('brand-modal')" class="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1.5 group-hover:gap-2 transition-all">
-            <span>Read Journey Breakdown</span>
-            <i data-lucide="chevron-right" class="w-4 h-4"></i>
-          </button>
-        </div>
       </div>
+    </section>
 
-      <!-- CASE STUDY 4: BRAND ARCHITECTURE & CAMPAIGNS (CYAN PALETTE) -->
-      <div class="case-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between transition-all hover:-translate-y-1 group" data-category="brand">
-        <div class="p-8">
-          <div class="flex items-center justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
-              Brand Architecture &bull; Growth
-            </span>
-            <span class="text-xs text-slate-400 flex items-center gap-1 font-mono">
-              <i data-lucide="megaphone" class="w-3.5 h-3.5"></i> AIESEC & Margene
-            </span>
-          </div>
-
-          <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-            National Brand Architecture, Narrative Social Proof & Sponsorships
-          </h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-6">
-            Authored national brand guidelines ("India Is A Feeling") to align decentralized local chapters under sensory identities (e.g., Bhubaneswar "Feeling of Serenity"). Secured Coca-Cola & RVCJ Media partnerships, driving 1,000+ pan-India registrations.
-          </p>
-
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300 font-mono">Brand Guidelines</span>
-            <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300 font-mono">5-Country Social Proof</span>
-            <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300 font-mono">RVCJ Media Collab</span>
-          </div>
-        </div>
-
-        <div class="px-8 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
-          <div class="text-xs text-slate-400 font-semibold">Scale: <span class="text-cyan-400">1,000+ Registrations</span></div>
-          <button onclick="openModal('campaign-modal')" class="text-xs font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5 group-hover:gap-2 transition-all">
-            <span>Read Campaign Breakdown</span>
-            <i data-lucide="chevron-right" class="w-4 h-4"></i>
-          </button>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CREATIVE SWIPE FILE / VISUAL WORK -->
-  <section id="creative" class="py-20 px-6 max-w-6xl mx-auto border-t border-white/5">
-    <div class="mb-12">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 mb-3">
-        <i data-lucide="palette" class="w-3.5 h-3.5"></i>
-        <span>Visual Execution & Design Assets</span>
-      </div>
-      <h2 class="text-3xl font-bold tracking-tight text-white mb-2">Campaign Creatives & Collateral</h2>
-      <p class="text-slate-400 text-sm">Hands-on creative direction across Adobe Illustrator, Premiere Pro, and Canva.</p>
-    </div>
-
-    <!-- Visual Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-      <!-- Asset 1: RVCJ Media -->
-      <div class="glass-card rounded-2xl p-5 group transition-all hover:border-cyan-500/40">
-        <div class="h-56 bg-slate-800 rounded-xl mb-4 overflow-hidden relative flex items-center justify-center border border-white/5">
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent z-10"></div>
-          <!-- Creative Representation -->
-          <div class="text-center z-20 px-4">
-            <span class="text-red-500 font-extrabold text-xl tracking-wider uppercase block">Coca-Cola</span>
-            <span class="text-white font-bold text-sm block mt-1">Youth Speak Forum</span>
-            <span class="inline-block mt-2 px-2.5 py-0.5 rounded bg-cyan-500 text-slate-950 font-extrabold text-[10px]">Media Partner: RVCJ</span>
-          </div>
-        </div>
-        <h4 class="font-bold text-white text-base mb-1">Youth Speak Forum &bull; RVCJ Partnership</h4>
-        <p class="text-xs text-slate-400 leading-relaxed">Official promotional asset co-branding Coca-Cola and viral publisher RVCJ Media (15M+ audience reach).</p>
-      </div>
-
-      <!-- Asset 2: Brand Guidelines -->
-      <div class="glass-card rounded-2xl p-5 group transition-all hover:border-violet-500/40">
-        <div class="h-56 bg-gradient-to-br from-indigo-950 to-slate-900 rounded-xl mb-4 overflow-hidden relative flex items-center justify-center border border-white/5 p-6 text-center">
-          <div class="z-20">
-            <div class="text-xs font-mono text-violet-400 mb-1">NATIONAL BRAND BOOK</div>
-            <div class="text-xl font-extrabold text-white">India is a feeling.</div>
-            <div class="text-[11px] text-slate-300 italic mt-1">"The feeling that makes you smile"</div>
-          </div>
-        </div>
-        <h4 class="font-bold text-white text-base mb-1">National Brand Architecture Book</h4>
-        <p class="text-xs text-slate-400 leading-relaxed">Designed official governance manual aligning 20+ local chapters under sensory emotional positioning.</p>
-      </div>
-
-      <!-- Asset 3: EP Testimonial Booklet -->
-      <div class="glass-card rounded-2xl p-5 group transition-all hover:border-amber-500/40">
-        <div class="h-56 bg-gradient-to-br from-blue-900 to-amber-950 rounded-xl mb-4 overflow-hidden relative flex items-center justify-center border border-white/5 p-6 text-center">
-          <div class="z-20">
-            <div class="text-xs font-mono text-amber-400 mb-1">GLOBAL SOCIAL PROOF</div>
-            <div class="text-lg font-bold text-white">EP Testimonial Gazette</div>
-            <div class="text-[11px] text-slate-300 mt-1">Bhubaneswar: "The feeling of serenity"</div>
-          </div>
-        </div>
-        <h4 class="font-bold text-white text-base mb-1">International Experience Gazette</h4>
-        <p class="text-xs text-slate-400 leading-relaxed">15-page narrative brochure showcasing exchange testimonials from Bahrain, Japan, Russia, Spain, and Kenya.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- TOOLKIT & SKILLS -->
-  <section id="skills" class="py-20 px-6 max-w-6xl mx-auto border-t border-white/5">
-    <div class="mb-12">
-      <h2 class="text-3xl font-bold tracking-tight text-white mb-2">Technical & Marketing Stack</h2>
-      <p class="text-slate-400 text-sm">Where analytical computing meets creative commercial execution.</p>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      
-      <div class="glass-card p-6 rounded-2xl border-t-2 border-t-violet-500">
-        <div class="text-violet-400 mb-4"><i data-lucide="compass" class="w-6 h-6"></i></div>
-        <h3 class="font-bold text-white mb-3">Product Marketing</h3>
-        <ul class="text-xs text-slate-400 space-y-2">
-          <li>&bull; Go-To-Market (GTM) Strategy</li>
-          <li>&bull; Buyer Persona Architecture</li>
-          <li>&bull; Competitive Battlecards</li>
-          <li>&bull; Value Proposition Framing</li>
-          <li>&bull; Monetization & Pricing Models</li>
-        </ul>
-      </div>
-
-      <div class="glass-card p-6 rounded-2xl border-t-2 border-t-emerald-500">
-        <div class="text-emerald-400 mb-4"><i data-lucide="bar-chart-3" class="w-6 h-6"></i></div>
-        <h3 class="font-bold text-white mb-3">Lifecycle & Growth</h3>
-        <ul class="text-xs text-slate-400 space-y-2">
-          <li>&bull; Epsilon Marketing Suite</li>
-          <li>&bull; Adobe Workfront Operations</li>
-          <li>&bull; Lifecycle Email Automation</li>
-          <li>&bull; Pilot Cohort QA & A/B Testing</li>
-          <li>&bull; Agile Scrum Campaign Protocol</li>
-        </ul>
-      </div>
-
-      <div class="glass-card p-6 rounded-2xl border-t-2 border-t-amber-500">
-        <div class="text-amber-400 mb-4"><i data-lucide="gem" class="w-6 h-6"></i></div>
-        <h3 class="font-bold text-white mb-3">Brand & CX</h3>
-        <ul class="text-xs text-slate-400 space-y-2">
-          <li>&bull; Consultative Selling Funnels</li>
-          <li>&bull; High-Ticket D2C Customer Journey</li>
-          <li>&bull; Brand Guidelines & Governance</li>
-          <li>&bull; Post-Purchase Retention Flows</li>
-          <li>&bull; Corporate Sponsorship Outreach</li>
-        </ul>
-      </div>
-
-      <div class="glass-card p-6 rounded-2xl border-t-2 border-t-cyan-500">
-        <div class="text-cyan-400 mb-4"><i data-lucide="code" class="w-6 h-6"></i></div>
-        <h3 class="font-bold text-white mb-3">Tech & Creative Tools</h3>
-        <ul class="text-xs text-slate-400 space-y-2">
-          <li>&bull; Adobe Illustrator & Premiere Pro</li>
-          <li>&bull; Figma & Canva</li>
-          <li>&bull; SQL & Python Fundamentals</li>
-          <li>&bull; PowerBI & Advanced Excel</li>
-          <li>&bull; HubSpot & Coursera Certified</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ABOUT & LEADERSHIP -->
-  <section id="about" class="py-20 px-6 max-w-4xl mx-auto border-t border-white/5">
-    <div class="glass-card p-8 sm:p-12 rounded-3xl relative overflow-hidden">
-      <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-violet-600/10 rounded-full blur-3xl pointer-events-none"></div>
-
-      <div class="flex items-center gap-3 mb-6">
-        <div class="w-12 h-12 rounded-full bg-violet-500/20 border border-violet-500/40 flex items-center justify-center text-violet-300 font-bold text-lg">
-          AS
-        </div>
+    <!-- OFF THE CLOCK: HOBBIES, TASTE & COMMUNITY -->
+    <section id="hobbies" class="py-16 sm:py-20 px-5 sm:px-6 max-w-6xl mx-auto border-t-2 border-ink/10 relative">
+      <div class="mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
         <div>
-          <h3 class="text-xl font-bold text-white">Apoorva Sahu</h3>
-          <p class="text-xs text-slate-400">Bengaluru, India &bull; NMIMS Bengaluru MBA &bull; KIIT B.Tech CS</p>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-ink">What feeds my taste</h2>
+          <p class="text-sm text-muted mt-1">Sharp marketing starts with paying obsessive attention to food, stories, cinema, and human behavior.</p>
         </div>
+        <!-- Tactile stamp badge -->
+        <span class="stamp-badge text-plum text-xs px-3 py-1 bg-white rotate-1 w-fit shadow-[2px_2px_0_#5B4B8A]">
+          <span>OBSESSIVE OBSERVATION</span>
+        </span>
       </div>
 
-      <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-        I bridge the gap between technical complexity and customer-centric growth. With a Computer Science degree (CGPA 9.38) and an MBA in Marketing (GPA 8.12), I bring analytical rigor to campaign operations and human empathy to brand narratives.
-      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Hobby 1: Kitchen Experiments with Interactive Toggle -->
+        <div class="editorial-card rounded-2xl p-6 bg-white relative overflow-hidden flex flex-col justify-between">
+          <!-- Washi tape pinning corner -->
+          <div class="washi-tape washi-tape-brick absolute -top-2.5 right-4 z-10 w-20 h-4 rotate-3 pointer-events-none"></div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-400 pt-6 border-t border-white/5">
-        <div>
-          <strong class="text-white block mb-1">Campus Leadership:</strong>
-          &bull; Branding & Engagement Head, <em>Insignia</em> (Alumni Network 1,000+)<br>
-          &bull; Senior Member, <em>Margene</em> (Marketing Club, NMIMS Bengaluru)
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-violet text-white border-[1.5px] border-ink flex items-center justify-center mb-4">
+              <i data-lucide="utensils" class="w-5 h-5 text-ink"></i>
+            </div>
+            <h3 class="font-display text-lg font-bold text-ink mb-2">Kitchen Experiments</h3>
+            <p id="kitchenText" class="text-xs text-muted leading-relaxed min-h-[72px]">
+              Treating the kitchen like a flavor A/B test: balancing acidity, tweaking heat, and testing how subtle seasoning changes completely transform a dish. You get to eat your winning prototypes.
+            </p>
+          </div>
+
+          <button type="button" onclick="toggleKitchen()" id="kitchenToggleBtn"
+                  class="mt-4 pt-3 border-t border-ink/10 min-h-11 inline-flex items-center gap-1.5 text-[11px] font-mono font-bold text-brick hover:underline w-fit">
+            <span>Marketing parallel</span> &rarr;
+          </button>
         </div>
-        <div>
-          <strong class="text-white block mb-1">Community Impact:</strong>
-          &bull; Led community health drives & authoring official awareness documentation across National Service Scheme (NSS) initiatives.
+
+        <!-- Hobby 2: Reading Shelf -->
+        <div class="editorial-card rounded-2xl p-6 bg-white flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-10 h-10 rounded-xl bg-wine/15 border-[1.5px] border-ink flex items-center justify-center">
+                <i data-lucide="book-open" class="w-5 h-5 text-wine"></i>
+              </div>
+              <span class="stamp-badge text-wine text-[9px] px-1.5 py-0.5 bg-paper -rotate-2">BEHAVIORAL</span>
+            </div>
+            <h3 class="font-display text-lg font-bold text-ink mb-2">Reading Shelf</h3>
+            <p class="text-xs text-muted leading-relaxed">
+              Hunting for memorable phrasing and behavioral truths. Usually mid-chapter on behavioral psychology (why people make irrational choices), brand memoirs, or gripping fiction.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-ink/10 text-[11px] font-mono text-muted">
+            Currently: Framing &amp; Value
+          </div>
+        </div>
+
+        <!-- Hobby 3: Cinema & Visual Rhythm -->
+        <div class="editorial-card rounded-2xl p-6 bg-white flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-10 h-10 rounded-xl bg-indigo/15 border-[1.5px] border-ink flex items-center justify-center">
+                <i data-lucide="clapperboard" class="w-5 h-5 text-indigo"></i>
+              </div>
+              <span class="stamp-badge text-indigo text-[9px] px-1.5 py-0.5 bg-paper rotate-2">90S HOOK</span>
+            </div>
+            <h3 class="font-display text-lg font-bold text-ink mb-2">Cinema &amp; Visual Rhythm</h3>
+            <p class="text-xs text-muted leading-relaxed">
+              Obsessed with camera framing, audio tension, and pacing. Great directors hook an audience in the first 90 seconds; the exact same challenge as a landing page hero.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-ink/10 text-[11px] font-mono text-muted">
+            Pacing beats spectacle
+          </div>
+        </div>
+
+        <!-- Campus & Community -->
+        <div class="editorial-card rounded-2xl p-6 bg-cream flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-brick text-paper border-[1.5px] border-ink flex items-center justify-center mb-4">
+              <i data-lucide="users" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display text-lg font-bold text-ink mb-2">Campus &amp; Community</h3>
+            <p class="text-xs text-muted leading-relaxed">
+              Branding Head at <strong class="text-ink">Insignia</strong> (1,000+ alumni network), Senior Member at <strong class="text-ink">Margene</strong> (50+ brand partners), Marketing Team Lead at <strong class="text-ink">AIESEC in Bhubaneswar</strong>, and led public health awareness initiatives for <strong class="text-ink">NSS</strong>.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-ink/10 text-[11px] font-mono text-muted">
+            1,000+ student reach
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- TOOLKIT & CREDENTIALS -->
+    <section id="skills" class="py-16 sm:py-20 px-5 sm:px-6 max-w-6xl mx-auto border-t-2 border-ink/10">
+      <div class="mb-10">
+        <h2 class="font-display text-3xl font-bold text-ink">Analytical + Creative Stack</h2>
+        <p class="text-sm text-muted mt-1">Disciplines, platforms, and frameworks I use to bridge commercial strategy with creative execution.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="p-5 rounded-2xl bg-white border-[1.5px] border-ink">
+          <h3 class="font-bold text-sm text-wine uppercase tracking-wider font-mono mb-3">Product Marketing</h3>
+          <ul class="text-xs text-muted space-y-2">
+            <li>&bull; Go-To-Market (GTM) Strategy</li>
+            <li>&bull; Buyer Persona Research</li>
+            <li>&bull; Competitor Battlecards</li>
+            <li>&bull; B2B SaaS ROI Business Cases</li>
+            <li>&bull; Cost-Plus &amp; Tiered Pricing</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border-[1.5px] border-ink">
+          <h3 class="font-bold text-sm text-plum uppercase tracking-wider font-mono mb-3">Lifecycle &amp; Ops</h3>
+          <ul class="text-xs text-muted space-y-2">
+            <li>&bull; Epsilon Marketing Suite</li>
+            <li>&bull; Adobe Workfront Governance</li>
+            <li>&bull; Lifecycle Email Automation</li>
+            <li>&bull; Pilot Cohort QA &amp; A/B Testing</li>
+            <li>&bull; Agile Scrum POD Workflows</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border-[1.5px] border-ink">
+          <h3 class="font-bold text-sm text-brick uppercase tracking-wider font-mono mb-3">Brand &amp; D2C CX</h3>
+          <ul class="text-xs text-muted space-y-2">
+            <li>&bull; Consultative Sales Funnels</li>
+            <li>&bull; High-Ticket Customer Journeys</li>
+            <li>&bull; Brand Identity Guidelines</li>
+            <li>&bull; Post-Purchase Retention</li>
+            <li>&bull; 50+ Partner Sponsor Outreach</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border-[1.5px] border-ink">
+          <h3 class="font-bold text-sm text-indigo uppercase tracking-wider font-mono mb-3">Tech &amp; Certs</h3>
+          <ul class="text-xs text-muted space-y-2">
+            <li>&bull; Illustrator, Premiere Pro, Canva</li>
+            <li>&bull; SQL, Python, PowerBI, Excel</li>
+            <li>&bull; HubSpot Inbound Marketing ('25)</li>
+            <li>&bull; GenAI Brand Mgmt ('25)</li>
+            <li>&bull; Coursera Marketing Analytics &amp; IMC</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- FOOTER & CONTACT -->
-  <footer id="contact" class="py-20 px-6 max-w-4xl mx-auto text-center border-t border-white/5">
-    <h2 class="text-3xl font-extrabold text-white mb-4">Let's Build Something High-Growth.</h2>
-    <p class="text-slate-400 text-sm max-w-md mx-auto mb-8">
-      Actively targeting full-time Product Marketing (PMM), Performance Marketing, and Brand Strategy roles.
-    </p>
+  <footer id="contact" class="py-16 sm:py-20 safe-x max-w-4xl mx-auto text-center">
+    <div class="editorial-card rounded-3xl p-8 sm:p-12 bg-cream">
+      <span class="sticker-pill inline-block px-3 py-1 rounded-full bg-white text-ink text-xs font-mono font-semibold mb-4">
+        Let&rsquo;s build something memorable
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-ink mb-4">
+        Want to talk GTM, brand, or your favorite recipe?
+      </h2>
+      <p class="text-sm text-muted max-w-md mx-auto mb-8">
+        Targeting full-time <strong class="text-ink">Product Marketing</strong>, <strong class="text-ink">Brand Marketing</strong>, and <strong class="text-ink">Performance Marketing</strong> roles.
+      </p>
 
-    <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
-      <a href="mailto:apoorva.sahu1110@gmail.com" class="px-6 py-3 bg-violet-600 hover:bg-violet-500 text-white font-bold rounded-xl shadow-lg shadow-violet-600/30 transition-all flex items-center gap-2">
-        <i data-lucide="mail" class="w-4 h-4"></i>
-        <span>apoorva.sahu1110@gmail.com</span>
-      </a>
-      <a href="https://linkedin.com/in/apoorva-sahu" target="_blank" rel="noopener noreferrer" class="px-6 py-3 glass-card hover:bg-white/10 text-white font-medium rounded-xl transition-all flex items-center gap-2">
-        <i data-lucide="linkedin" class="w-4 h-4"></i>
-        <span>LinkedIn</span>
-      </a>
-    </div>
+      <div class="flex flex-wrap items-center justify-center gap-3.5 mb-8">
+        <a href="mailto:apoorva.sahu1110@gmail.com"
+           class="editorial-card px-4 sm:px-5 py-3 min-h-11 w-full sm:w-auto justify-center rounded-xl bg-ink text-paper font-bold text-[11px] sm:text-sm inline-flex items-center gap-2 hover:bg-brick break-all">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          <span>apoorva.sahu1110@gmail.com</span>
+        </a>
+        <a href="https://www.linkedin.com/in/apoorva-sahu-3b23781b5/" target="_blank" rel="noopener noreferrer"
+           class="editorial-card px-5 py-3 rounded-xl bg-white text-ink font-bold text-sm inline-flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-4 h-4 shrink-0">
+            <path d="M20.45 2H3.55C2.7 2 2 2.7 2 3.55v16.9c0 .85.7 1.55 1.55 1.55h16.9c.85 0 1.55-.7 1.55-1.55V3.55C22 2.7 21.3 2 20.45 2zM7.93 18.75H4.98V9.2h2.95v9.55zM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42zm12.3 10.85h-2.94v-4.64c0-1.11-.02-2.53-1.54-2.53-1.55 0-1.79 1.2-1.79 2.45v4.72H9.54V9.2h2.83v1.3h.04c.39-.74 1.35-1.53 2.78-1.53 2.97 0 3.52 1.96 3.52 4.5v5.28z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="assets/Apoorva-Sahu-Resume.pdf" target="_blank" rel="noopener noreferrer"
+           class="editorial-card px-5 py-3 rounded-xl bg-white text-ink font-bold text-sm inline-flex items-center gap-2">
+          <i data-lucide="file-text" class="w-4 h-4"></i>
+          <span>Resume PDF</span>
+        </a>
+      </div>
 
-    <div class="text-xs text-slate-500">
-      &copy; Designed & Hosted via Vercel &bull; Apoorva Sahu
+      <!-- Interactive Recipe Easter Egg -->
+      <div class="pt-6 border-t border-ink/20 max-w-md mx-auto mb-8">
+        <button type="button" onclick="rollRecipe()"
+                class="editorial-card px-4 py-2.5 min-h-11 w-full sm:w-auto text-left sm:text-center rounded-xl bg-white text-ink text-xs font-mono font-bold inline-flex items-center gap-2 hover:bg-violet hover:text-white transition-colors shadow-[2px_2px_0_#111418]">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brick shrink-0"></i>
+          <span id="recipeRollBtnText"><span data-recipe-short>Roll a kitchen experiment 🎲</span><span class="hidden sm:inline" data-recipe-long>Roll for a kitchen experiment recommendation 🎲</span></span>
+        </button>
+
+        <div id="recipeBox" class="hidden mt-4 p-4 rounded-xl bg-white border-[1.5px] border-ink text-xs font-mono text-ink text-left shadow-[3px_3px_0_#111418] flex items-start gap-3 transition-all">
+          <span class="text-2xl shrink-0">🍳</span>
+          <div>
+            <strong class="block text-brick font-bold text-sm" id="recipeName"></strong>
+            <p id="recipeDesc" class="text-muted text-xs mt-1 leading-relaxed"></p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-xs font-mono text-muted">
+        &copy; 2026 Apoorva Sahu &bull; Hosted on Vercel
+      </p>
     </div>
   </footer>
 
-  <!-- ==================== MODALS ==================== -->
+  <!-- ==================== CASE STUDY MODALS ==================== -->
 
   <!-- MODAL 1: PMM STRATEGY -->
-  <div id="pmm-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="glass-card bg-[#0F172A] border border-violet-500/30 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-10 text-left relative">
-      <button onclick="closeModal('pmm-modal')" class="absolute top-6 right-6 p-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white">
-        <i data-lucide="x" class="w-5 h-5"></i>
+  <div id="pmm-modal" class="modal-overlay fixed inset-0 z-50 bg-ink/75 backdrop-blur-sm hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="pmm-title">
+    <div class="bg-paper border-2 border-ink shadow-[8px_8px_0_#111418] rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-10 text-left relative">
+      <button type="button" onclick="closeModal('pmm-modal')" aria-label="Close modal"
+              class="sticky top-0 float-right min-h-11 min-w-11 inline-flex items-center justify-center z-10 p-2 rounded-lg bg-white border-[1.5px] border-ink text-ink hover:bg-violet hover:text-white">
+        <i data-lucide="x" class="w-4 h-4"></i>
       </button>
 
-      <span class="text-xs font-bold uppercase tracking-wider text-violet-400">Product Marketing &bull; GTM Case Study</span>
-      <h3 class="text-2xl font-bold text-white mt-1 mb-6">Augmented Reality GTM & 4-Tier Monetization Strategy</h3>
+      <span class="font-mono text-xs font-bold uppercase tracking-wider text-wine">Product Marketing &bull; GTM Case Study</span>
+      <h3 id="pmm-title" class="font-display text-2xl sm:text-3xl font-bold text-ink mt-1 mb-6 pr-12">
+        Augmented Reality GTM &amp; 4-Tier Monetization Strategy
+      </h3>
 
-      <div class="space-y-6 text-sm text-slate-300 leading-relaxed">
+      <div class="space-y-6 text-sm text-muted leading-relaxed">
         <div>
-          <h4 class="font-bold text-white text-base mb-2">1. The Market Inefficiency</h4>
-          <p class="text-slate-400">While AR filter consumption surged on Instagram and Snapchat, commercial development remained locked behind enterprise studios (AliveNow, Superfan Studio) charging $2,000–$20,000 per project. This excluded 99% of small businesses, creators, and event organizers.</p>
+          <h4 class="font-bold text-ink text-base mb-1.5">1. The Market Inefficiency</h4>
+          <p>While AR filter usage exploded across Instagram and Snapchat, commercial production remained locked behind studios (AliveNow, Superfan Studio) charging $2,000&ndash;$20,000 per build - pricing out 99% of SMBs, creators, and campus events.</p>
         </div>
 
         <div>
-          <h4 class="font-bold text-white text-base mb-2">2. Primary Research & Persona Segmentation (N=60)</h4>
-          <p class="text-slate-400 mb-2">Conducted primary quantitative research revealing that 88.9% of potential buyers were willing to pay ₹400–₹3,200 for turnkey filters, and 59.3% preferred pre-made customizable templates over bespoke builds.</p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-            <div class="p-3 bg-white/5 rounded-lg border border-white/5"><strong class="text-violet-300">Independent Creators:</strong> Need high engagement to bypass algorithmic decline.</div>
-            <div class="p-3 bg-white/5 rounded-lg border border-white/5"><strong class="text-violet-300">D2C Retail Brands:</strong> Virtual product try-ons to slash return rates.</div>
-            <div class="p-3 bg-white/5 rounded-lg border border-white/5"><strong class="text-violet-300">Campus & Events:</strong> Low-cost virality for registrations and footfall.</div>
-            <div class="p-3 bg-white/5 rounded-lg border border-white/5"><strong class="text-violet-300">Influencers:</strong> Sponsored interactive asset integrations.</div>
+          <h4 class="font-bold text-ink text-base mb-2">2. Primary Research &amp; 5 Buyer Personas (N=60)</h4>
+          <p class="mb-3">88.9% of surveyed buyers were willing to pay ₹400&ndash;₹3,200, and 59.3% preferred customizable templates over custom builds.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+            <div class="p-3 bg-white rounded-xl border border-ink/20"><strong class="text-wine block mb-0.5">Independent Creators</strong>Fast engagement assets to beat organic feed decline.</div>
+            <div class="p-3 bg-white rounded-xl border border-ink/20"><strong class="text-wine block mb-0.5">D2C Retail Brands</strong>Virtual product try-ons to reduce pre-purchase hesitation.</div>
+            <div class="p-3 bg-white rounded-xl border border-ink/20"><strong class="text-wine block mb-0.5">Campus &amp; Event Organizers</strong>Shareable virality to boost registration footfall.</div>
+            <div class="p-3 bg-white rounded-xl border border-ink/20"><strong class="text-wine block mb-0.5">Influencers &amp; Micro-Agencies</strong>Sponsored interactive branded integrations.</div>
           </div>
         </div>
 
         <div>
-          <h4 class="font-bold text-white text-base mb-2">3. Cost Architecture & 4-Tier Pricing Strategy</h4>
-          <p class="text-slate-400 mb-3">Modeled operational break-even (2 FTEs + SparkAR/Adobe tooling = ₹78,900/month baseline) and deployed a penetration pricing schedule with progressive margins:</p>
-          <div class="overflow-x-auto">
-            <table class="w-full text-left text-xs border border-white/10 rounded-lg overflow-hidden">
-              <thead class="bg-white/5 text-slate-200">
+          <h4 class="font-bold text-ink text-base mb-2">3. Cost Baseline (₹78,900/mo) &amp; 4-Tier Penetration Pricing</h4>
+          <div class="overflow-x-auto rounded-xl border-[1.5px] border-ink bg-white">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-cream border-b-[1.5px] border-ink text-ink">
                 <tr>
-                  <th class="p-2.5">Tier</th>
-                  <th class="p-2.5">Package Scope</th>
-                  <th class="p-2.5">SLA</th>
-                  <th class="p-2.5">Cost</th>
-                  <th class="p-2.5">Margin</th>
-                  <th class="p-2.5 text-violet-300">Price</th>
+                  <th class="p-3">Tier</th>
+                  <th class="p-3">Scope</th>
+                  <th class="p-3">SLA</th>
+                  <th class="p-3">Cost</th>
+                  <th class="p-3">Margin</th>
+                  <th class="p-3 text-wine">Price</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-white/5 text-slate-300 font-mono">
-                <tr><td class="p-2.5 font-sans font-bold">Premades</td><td class="p-2.5 font-sans">2D Filter + Color Presets</td><td class="p-2.5">1 Day</td><td class="p-2.5">₹400</td><td class="p-2.5">10%</td><td class="p-2.5 text-violet-400 font-bold">₹440</td></tr>
-                <tr><td class="p-2.5 font-sans font-bold">Package 1</td><td class="p-2.5 font-sans">2D Camera + Reactive Sound</td><td class="p-2.5">2 Days</td><td class="p-2.5">₹2,800</td><td class="p-2.5">15%</td><td class="p-2.5 text-violet-400 font-bold">₹3,220</td></tr>
-                <tr><td class="p-2.5 font-sans font-bold">Package 2</td><td class="p-2.5 font-sans">2D + 3D Camera Triggers</td><td class="p-2.5">5 Days</td><td class="p-2.5">₹7,000</td><td class="p-2.5">20%</td><td class="p-2.5 text-violet-400 font-bold">₹8,400</td></tr>
-                <tr><td class="p-2.5 font-sans font-bold">Package 3</td><td class="p-2.5 font-sans">Bespoke 3D + Face Tracking</td><td class="p-2.5">7 Days</td><td class="p-2.5">₹9,800</td><td class="p-2.5">25%</td><td class="p-2.5 text-violet-400 font-bold">₹12,250</td></tr>
+              <tbody class="divide-y divide-ink/10 font-mono tabular-nums text-ink">
+                <tr><td class="p-3 font-sans font-bold">Premades</td><td class="p-3 font-sans text-muted">2D Filter + Color Presets</td><td class="p-3">1 Day</td><td class="p-3">₹400</td><td class="p-3">10%</td><td class="p-3 font-bold text-wine">₹440</td></tr>
+                <tr><td class="p-3 font-sans font-bold">Package 1</td><td class="p-3 font-sans text-muted">2D Camera + Reactive Sound</td><td class="p-3">2 Days</td><td class="p-3">₹2,800</td><td class="p-3">15%</td><td class="p-3 font-bold text-wine">₹3,220</td></tr>
+                <tr><td class="p-3 font-sans font-bold">Package 2</td><td class="p-3 font-sans text-muted">2D + 3D Camera Triggers</td><td class="p-3">5 Days</td><td class="p-3">₹7,000</td><td class="p-3">20%</td><td class="p-3 font-bold text-wine">₹8,400</td></tr>
+                <tr><td class="p-3 font-sans font-bold">Package 3</td><td class="p-3 font-sans text-muted">Bespoke 3D + Face Tracking</td><td class="p-3">7 Days</td><td class="p-3">₹9,800</td><td class="p-3">25%</td><td class="p-3 font-bold text-wine">₹12,250</td></tr>
               </tbody>
             </table>
           </div>
@@ -535,37 +1097,50 @@
   </div>
 
   <!-- MODAL 2: PERFORMANCE OPS -->
-  <div id="perf-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="glass-card bg-[#0F172A] border border-emerald-500/30 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-10 text-left relative">
-      <button onclick="closeModal('perf-modal')" class="absolute top-6 right-6 p-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white">
-        <i data-lucide="x" class="w-5 h-5"></i>
+  <div id="perf-modal" class="modal-overlay fixed inset-0 z-50 bg-ink/75 backdrop-blur-sm hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="perf-title">
+    <div class="bg-paper border-2 border-ink shadow-[8px_8px_0_#111418] rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-10 text-left relative">
+      <button type="button" onclick="closeModal('perf-modal')" aria-label="Close modal"
+              class="sticky top-0 float-right min-h-11 min-w-11 inline-flex items-center justify-center z-10 p-2 rounded-lg bg-white border-[1.5px] border-ink text-ink hover:bg-violet hover:text-white">
+        <i data-lucide="x" class="w-4 h-4"></i>
       </button>
 
-      <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Performance Marketing &bull; Marketing Ops</span>
-      <h3 class="text-2xl font-bold text-white mt-1 mb-6">Enterprise Lifecycle Email Engine & Agile Operations</h3>
+      <span class="font-mono text-xs font-bold uppercase tracking-wider text-plum">Performance &amp; Marketing Ops</span>
+      <h3 id="perf-title" class="font-display text-2xl sm:text-3xl font-bold text-ink mt-1 mb-6 pr-12">
+        Enterprise Lifecycle Email Engine &amp; Agile Scrum Protocol
+      </h3>
 
-      <div class="space-y-6 text-sm text-slate-300 leading-relaxed">
-        <div>
-          <h4 class="font-bold text-white text-base mb-2">1. The Scale & Results</h4>
-          <p class="text-slate-400">Deployed 700+ promotional and lifecycle email campaigns in the financial services sector using Epsilon Marketing Suite and Adobe Workfront. Achieved a 24% open rate (outperforming the ~18% industry benchmark) and 2.5% CTR.</p>
+      <div class="space-y-6 text-sm text-muted leading-relaxed">
+        <div class="grid grid-cols-3 gap-3 p-4 rounded-xl bg-white border-[1.5px] border-ink text-center">
+          <div>
+            <div class="font-display text-xl sm:text-2xl font-bold text-ink tabular-nums">700+</div>
+            <div class="text-[11px] font-mono text-muted">Campaigns Shipped</div>
+          </div>
+          <div>
+            <div class="font-display text-xl sm:text-2xl font-bold text-plum tabular-nums">24%</div>
+            <div class="text-[11px] font-mono text-muted">Open Rate (~18% avg)</div>
+          </div>
+          <div>
+            <div class="font-display text-xl sm:text-2xl font-bold text-ink tabular-nums">2.5%</div>
+            <div class="text-[11px] font-mono text-muted">Click-Through Rate</div>
+          </div>
         </div>
 
-        <div>
-          <h4 class="font-bold text-white text-base mb-2">2. Diagnosing The 3 Waterfall Bottlenecks</h4>
-          <ul class="text-slate-400 space-y-2 list-disc list-inside">
-            <li><strong>Asset Retrieval Latency:</strong> Recurring/relaunched campaigns lacked searchable creative repositories, pushing proofs past deadlines.</li>
-            <li><strong>Cross-Functional Review Friction:</strong> Communication silos between Client Marketing Managers (CMM), Channel Leads, and Operations led to launch delays.</li>
-            <li><strong>Proofing Fatigue:</strong> Final legal creatives frequently spanned 10+ pages, inflating audit cycles.</li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-bold text-white text-base mb-2">3. The Agile Scrum Solution</h4>
-          <p class="text-slate-400 mb-2">Architected a streamlined campaign governance workflow based on the 3 C's (Card, Conversation, Confirmation):</p>
-          <div class="p-4 bg-white/5 rounded-xl border border-white/5 font-mono text-xs text-slate-300 space-y-1">
-            <p>&bull; <strong>Daily Scrum Standup:</strong> Aligned Scrum Master, CMM, and Channel Leads on production specs.</p>
-            <p>&bull; <strong>The "2-Call Maximum" Cap:</strong> Discrepancies were capped at 2 structured calls before executive resolution, killing weeks of async delay.</p>
-            <p>&bull; <strong>Pilot QA Protocol:</strong> Pre-deployment testing on ~300-recipient cohorts within Epsilon to validate rendering and tracking before full blast.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-xl bg-brick/10 border border-brick/30">
+            <h4 class="font-bold text-brick uppercase font-mono mb-2">Before: 3 Waterfall Bottlenecks</h4>
+            <ul class="space-y-2 text-ink/85">
+              <li>&bull; <strong>Asset Latency:</strong> Relaunches lacked indexed creative archives.</li>
+              <li>&bull; <strong>Review Silos:</strong> Friction across CMM, Channel Leads, Ops &amp; Auditors.</li>
+              <li>&bull; <strong>Proofing Bloat:</strong> 10+ page legal creatives stretched approval cycles.</li>
+            </ul>
+          </div>
+          <div class="p-4 rounded-xl bg-plum/10 border border-plum/30">
+            <h4 class="font-bold text-plum uppercase font-mono mb-2">After: Scrum POD Protocol</h4>
+            <ul class="space-y-2 text-ink/85">
+              <li>&bull; <strong>Daily Standups:</strong> Aligned Scrum Master, CMM &amp; Channel Leads via Workfront.</li>
+              <li>&bull; <strong>2-Call Escalation Cap:</strong> Unresolved edits escalated after 2 structured calls.</li>
+              <li>&bull; <strong>~300-User Pilot QA:</strong> Pre-launch rendering &amp; tracking checks in Epsilon.</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -573,136 +1148,331 @@
   </div>
 
   <!-- MODAL 3: BRAND CX & D2C -->
-  <div id="brand-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="glass-card bg-[#0F172A] border border-amber-500/30 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-10 text-left relative">
-      <button onclick="closeModal('brand-modal')" class="absolute top-6 right-6 p-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white">
-        <i data-lucide="x" class="w-5 h-5"></i>
+  <div id="brand-modal" class="modal-overlay fixed inset-0 z-50 bg-ink/75 backdrop-blur-sm hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="brand-title">
+    <div class="bg-paper border-2 border-ink shadow-[8px_8px_0_#111418] rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-10 text-left relative">
+      <button type="button" onclick="closeModal('brand-modal')" aria-label="Close modal"
+              class="sticky top-0 float-right min-h-11 min-w-11 inline-flex items-center justify-center z-10 p-2 rounded-lg bg-white border-[1.5px] border-ink text-ink hover:bg-violet hover:text-white">
+        <i data-lucide="x" class="w-4 h-4"></i>
       </button>
 
-      <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Brand Marketing &bull; Omnichannel CX</span>
-      <h3 class="text-2xl font-bold text-white mt-1 mb-6">High-Ticket D2C Experiential Marketing (Frootle India)</h3>
+      <span class="font-mono text-xs font-bold uppercase tracking-wider text-brick">Brand Marketing &bull; High-Ticket D2C CX</span>
+      <h3 id="brand-title" class="font-display text-2xl sm:text-3xl font-bold text-ink mt-1 mb-6 pr-12">
+        Experiential Retail &amp; Consultative Sales Engine (Frootle India)
+      </h3>
 
-      <div class="space-y-6 text-sm text-slate-300 leading-relaxed">
-        <div>
-          <h4 class="font-bold text-white text-base mb-2">1. The High-Ticket Hurdle</h4>
-          <p class="text-slate-400">Selling premium smart appliances (ECOVACS, De'Longhi, DJI, Tineco, XGIMI) priced at ₹25,000–₹80,000+ faces consumer inertia. Customers research online ("webrooming") but hesitate to check out due to perceived complexity and setup anxiety.</p>
-        </div>
+      <div class="space-y-6 text-sm text-muted leading-relaxed">
+        <p>At Frootle&rsquo;s HSR Layout experience center in Bangalore, shoppers researched ₹25K&ndash;₹80K+ appliances online (ECOVACS, De&rsquo;Longhi, Tineco, XGIMI, DJI) but hesitated to buy due to setup anxiety. Built a repeatable 7-step journey yielding <strong class="text-ink">₹20L+ direct revenue at a 45% close rate</strong>.</p>
 
-        <div>
-          <h4 class="font-bold text-white text-base mb-2">2. The 7-Step Consultative Conversion Funnel</h4>
-          <div class="space-y-2 text-xs">
-            <div class="p-2.5 bg-white/5 rounded-lg"><strong class="text-amber-400">1. Welcome & Hospitality:</strong> Low-pressure lounge environment in HSR Bangalore.</div>
-            <div class="p-2.5 bg-white/5 rounded-lg"><strong class="text-amber-400">2. Category Intent:</strong> Discovering the primary lifestyle trigger.</div>
-            <div class="p-2.5 bg-white/5 rounded-lg"><strong class="text-amber-400">3. Pain Audit:</strong> Evaluating square footage, domestic pet hair, and floor layout.</div>
-            <div class="p-2.5 bg-white/5 rounded-lg"><strong class="text-amber-400">4. Budget Mapping:</strong> Structuring EMI / payment options.</div>
-            <div class="p-2.5 bg-white/5 rounded-lg"><strong class="text-amber-400">5. Curated Match:</strong> Limiting options to 1–2 best-fit models to prevent decision paralysis.</div>
-            <div class="p-2.5 bg-white/5 rounded-lg"><strong class="text-amber-400">6. Sensory Proof:</strong> Hands-on demo (operating vacuums, pulling espresso shots).</div>
-            <div class="p-2.5 bg-white/5 rounded-lg"><strong class="text-amber-400">7. Onboarding Engine:</strong> Instant WhatsApp video setup guides + same-day technician dispatch.</div>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="font-bold text-white text-base mb-2">3. Business Outcomes</h4>
-          <p class="text-slate-400">Generated ₹20L+ in direct revenue with a 45% walk-in conversion rate, while eliminating return-rate friction through proactive onboarding.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+          <div class="p-3 bg-white rounded-xl border border-ink/20"><strong class="text-brick font-mono">01.</strong> Low-pressure hospitality welcome</div>
+          <div class="p-3 bg-white rounded-xl border border-ink/20"><strong class="text-brick font-mono">02.</strong> Category &amp; lifestyle intent discovery</div>
+          <div class="p-3 bg-white rounded-xl border border-ink/20"><strong class="text-brick font-mono">03.</strong> Home pain audit (layout, flooring, pets)</div>
+          <div class="p-3 bg-white rounded-xl border border-ink/20"><strong class="text-brick font-mono">04.</strong> Transparent budget &amp; EMI mapping</div>
+          <div class="p-3 bg-white rounded-xl border border-ink/20"><strong class="text-brick font-mono">05.</strong> Curated shortlist (max 1&ndash;2 models)</div>
+          <div class="p-3 bg-white rounded-xl border border-ink/20"><strong class="text-brick font-mono">06.</strong> Live sensory demo (espresso / vacuums)</div>
+          <div class="p-3 bg-cream rounded-xl border border-ink sm:col-span-2"><strong class="text-ink font-mono">07.</strong> Instant WhatsApp setup videos + same-day technician dispatch to cut return friction.</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- MODAL 4: CAMPAIGNS & ARCHITECTURE -->
-  <div id="campaign-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="glass-card bg-[#0F172A] border border-cyan-500/30 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-10 text-left relative">
-      <button onclick="closeModal('campaign-modal')" class="absolute top-6 right-6 p-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white">
-        <i data-lucide="x" class="w-5 h-5"></i>
+  <!-- MODAL 4: CAMPAIGNS & BRAND ARCHITECTURE -->
+  <div id="campaign-modal" class="modal-overlay fixed inset-0 z-50 bg-ink/75 backdrop-blur-sm hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="campaign-title">
+    <div class="bg-paper border-2 border-ink shadow-[8px_8px_0_#111418] rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-10 text-left relative">
+      <button type="button" onclick="closeModal('campaign-modal')" aria-label="Close modal"
+              class="sticky top-0 float-right min-h-11 min-w-11 inline-flex items-center justify-center z-10 p-2 rounded-lg bg-white border-[1.5px] border-ink text-ink hover:bg-violet hover:text-white">
+        <i data-lucide="x" class="w-4 h-4"></i>
       </button>
 
-      <span class="text-xs font-bold uppercase tracking-wider text-cyan-400">Brand Architecture &bull; Growth Operations</span>
-      <h3 class="text-2xl font-bold text-white mt-1 mb-6">National Brand Architecture & Sponsorship Syndication</h3>
+      <span class="font-mono text-xs font-bold uppercase tracking-wider text-indigo">Brand Architecture &bull; Growth</span>
+      <h3 id="campaign-title" class="font-display text-2xl sm:text-3xl font-bold text-ink mt-1 mb-6 pr-12">
+        Sensory Brand Governance &amp; Sponsorship Growth
+      </h3>
 
-      <div class="space-y-6 text-sm text-slate-300 leading-relaxed">
-        <div>
-          <h4 class="font-bold text-white text-base mb-2">1. Unifying Fragmented Chapters ("India Is A Feeling")</h4>
-          <p class="text-slate-400">Authored national brand guidelines to resolve internal chapter competition. Created a 4-step localization framework where regional chapters anchored their identity in sensory emotion (e.g., AIESEC in Bhubaneswar = "The Feeling of Serenity").</p>
+      <div class="space-y-5 text-sm text-muted leading-relaxed">
+        <div class="p-4 rounded-xl bg-white border border-ink/20">
+          <h4 class="font-bold text-ink mb-1">1. National Sensory Localization (&ldquo;India Is A Feeling&rdquo;)</h4>
+          <p class="text-xs leading-relaxed">Structured local chapter brand guidelines so regional teams stayed consistent while owning unique emotional hooks (e.g., Bhubaneswar: <em>&ldquo;The feeling of serenity&rdquo;</em>).</p>
         </div>
-
-        <div>
-          <h4 class="font-bold text-white text-base mb-2">2. Narrative-Driven Social Proof (The EP Gazette)</h4>
-          <p class="text-slate-400">Designed and compiled the 15-page international testimonial booklet featuring exchange participants from Bahrain, Japan, Russia, Spain, and Kenya. Aligned the content across a 4-stage lifecycle email funnel (Attraction, Consideration, Preparation, Post-Experience).</p>
+        <div class="p-4 rounded-xl bg-white border border-ink/20">
+          <h4 class="font-bold text-ink mb-1">2. 5-Country Social Proof Gazette</h4>
+          <p class="text-xs leading-relaxed">Compiled a 15-page international testimonial booklet featuring stories across Bahrain, Japan, Russia, Spain, and Kenya, mapped to a 4-stage lifecycle email funnel.</p>
         </div>
-
-        <div>
-          <h4 class="font-bold text-white text-base mb-2">3. Media Syndication & Markopolis Growth</h4>
-          <p class="text-slate-400">&bull; Designed official promotional collateral co-branding Coca-Cola and viral publisher RVCJ Media (15M+ followers) for Youth Speak Forum.<br>&bull; Led sponsorship outreach to 25+ brand partners and drove 1,000+ student registrations for Markopolis at NMIMS Bengaluru.</p>
+        <div class="p-4 rounded-xl bg-white border border-ink/20">
+          <h4 class="font-bold text-ink mb-1">3. Co-Branding &amp; Markopolis Scale</h4>
+          <p class="text-xs leading-relaxed">Designed Youth Speak Forum creatives co-branding Coca-Cola and RVCJ Media (15M+ audience), and led sponsorship outreach across 50+ brand partners for Markopolis (1,000+ registrations).</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- JAVASCRIPT LOGIC -->
+  <!-- LIGHTBOX MODAL FOR CREATIVE SWIPE FILE -->
+  <div id="lightbox-modal" class="modal-overlay fixed inset-0 z-50 bg-ink/85 backdrop-blur-sm hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+    <div class="bg-paper border-2 border-ink shadow-[8px_8px_0_#111418] rounded-2xl max-w-4xl w-full max-h-[92vh] overflow-y-auto p-5 sm:p-8 relative">
+      <button type="button" onclick="closeModal('lightbox-modal')" aria-label="Close preview"
+              class="sticky top-0 float-right min-h-11 min-w-11 inline-flex items-center justify-center z-10 p-2 rounded-lg bg-white border-[1.5px] border-ink text-ink hover:bg-violet hover:text-white">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <h3 id="lightbox-title" class="font-display text-xl sm:text-2xl font-bold text-ink pr-12"></h3>
+      <p id="lightbox-desc" class="text-xs sm:text-sm text-muted mt-1 mb-5"></p>
+
+      <div class="rounded-xl overflow-hidden bg-cream border-[1.5px] border-ink flex items-center justify-center min-h-[260px]">
+        <img id="lightbox-img" alt="" class="max-h-[65vh] max-w-full h-auto w-auto object-contain">
+        <p id="lightbox-missing" class="hidden text-xs font-mono text-muted p-8 text-center">
+          Asset preview will appear automatically once the image file is added to <code class="bg-white px-1.5 py-0.5 rounded border border-ink/20">assets/</code>.
+        </p>
+      </div>
+
+      <div id="lightbox-pdf-wrap" class="hidden mt-4 text-right">
+        <a id="lightbox-pdf-link" href="#" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-1.5 text-xs font-bold px-4 py-2 rounded-lg bg-ink text-paper hover:bg-brick">
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          <span>Open Full Booklet PDF</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
   <script>
-    // Initialize Lucide icons
     lucide.createIcons();
 
-    // Category Filtering
-    function filterWork(cat) {
-      const cards = document.querySelectorAll('.case-card');
-      const buttons = document.querySelectorAll('.filter-btn');
+    let lastFocusedTrigger = null;
 
-      // Update button styles
-      buttons.forEach(btn => {
-        btn.classList.remove('bg-white/10', 'text-white');
-        btn.classList.add('text-slate-400');
-      });
-      event.target.classList.add('bg-white/10', 'text-white');
-      event.target.classList.remove('text-slate-400');
+    // Case study top tab switcher (My Work vs Tear-Downs I Admire)
+    function switchCaseTab(tabName, btn) {
+      document.getElementById('tab-mine').classList.toggle('hidden', tabName !== 'mine');
+      document.getElementById('tab-admired').classList.toggle('hidden', tabName !== 'admired');
 
-      // Filter cards
-      cards.forEach(card => {
-        if (cat === 'all' || card.dataset.category === cat) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
+      document.querySelectorAll('.case-tab-btn').forEach(el => {
+        const isActive = el === btn;
+        el.setAttribute('aria-selected', String(isActive));
+        el.classList.toggle('bg-ink', isActive);
+        el.classList.toggle('text-paper', isActive);
+        el.classList.toggle('text-ink/70', !isActive);
       });
     }
 
-    // Modal Control
-    function openModal(id) {
+    // Role filter inside "My Work"
+    function filterWork(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(el => {
+        const isActive = el === btn;
+        el.setAttribute('aria-pressed', String(isActive));
+        el.classList.toggle('bg-violet', isActive);
+        el.classList.toggle('text-white', isActive);
+        el.classList.toggle('bg-white', !isActive);
+        el.classList.toggle('text-ink', !isActive);
+      });
+
+      document.querySelectorAll('.case-card').forEach(card => {
+        const match = cat === 'all' || card.dataset.category === cat;
+        card.style.display = match ? 'flex' : 'none';
+      });
+    }
+
+    // Modal Controls
+    function openModal(id, triggerEl) {
+      lastFocusedTrigger = triggerEl || document.activeElement;
       const modal = document.getElementById(id);
+      if (!modal) return;
       modal.classList.remove('hidden');
       modal.classList.add('flex');
       document.body.style.overflow = 'hidden';
+      const closeBtn = modal.querySelector('button[aria-label]');
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function openLightbox(imgSrc, title, desc, triggerEl, pdfHref) {
+      const img = document.getElementById('lightbox-img');
+      const missing = document.getElementById('lightbox-missing');
+      const pdfWrap = document.getElementById('lightbox-pdf-wrap');
+      const pdfLink = document.getElementById('lightbox-pdf-link');
+
+      document.getElementById('lightbox-title').textContent = title;
+      document.getElementById('lightbox-desc').textContent = desc;
+
+      img.style.display = 'block';
+      missing.classList.add('hidden');
+      img.alt = title;
+      img.onerror = function() {
+        img.style.display = 'none';
+        missing.classList.remove('hidden');
+      };
+      img.src = imgSrc;
+
+      if (pdfHref) {
+        pdfLink.href = pdfHref;
+        pdfWrap.classList.remove('hidden');
+      } else {
+        pdfWrap.classList.add('hidden');
+      }
+
+      openModal('lightbox-modal', triggerEl);
     }
 
     function closeModal(id) {
       const modal = document.getElementById(id);
+      if (!modal) return;
       modal.classList.add('hidden');
       modal.classList.remove('flex');
-      document.body.style.overflow = 'auto';
-    }
-
-    // Close on clicking backdrop
-    window.onclick = function(e) {
-      if (e.target.classList.contains('fixed')) {
-        e.target.classList.add('hidden');
-        e.target.classList.remove('flex');
-        document.body.style.overflow = 'auto';
+      document.body.style.overflow = '';
+      if (lastFocusedTrigger && typeof lastFocusedTrigger.focus === 'function') {
+        lastFocusedTrigger.focus();
+        lastFocusedTrigger = null;
       }
     }
 
-    // Copy Email Function
+    function closeAllModals() {
+      document.querySelectorAll('.modal-overlay').forEach(modal => {
+        if (!modal.classList.contains('hidden')) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }
+      });
+      document.body.style.overflow = '';
+      if (lastFocusedTrigger && typeof lastFocusedTrigger.focus === 'function') {
+        lastFocusedTrigger.focus();
+        lastFocusedTrigger = null;
+      }
+    }
+
+    // Backdrop click ONLY on .modal-overlay (never touches navbar!)
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) closeAllModals();
+      });
+    });
+
+    // Escape key closes open modal, lightbox, or the mobile drawer
+    document.addEventListener('keydown', function(e) {
+      if (e.key !== 'Escape') return;
+      closeAllModals();
+      const menu = document.getElementById('mobileMenu');
+      if (menu && !menu.classList.contains('hidden')) toggleMobileMenu();
+    });
+
+    // Copy Email with clipboard fallback
     function copyEmail() {
       const email = 'apoorva.sahu1110@gmail.com';
-      navigator.clipboard.writeText(email).then(() => {
-        const btn = document.getElementById('copyBtn');
-        btn.innerHTML = '<i data-lucide="check" class="w-4 h-4 text-emerald-400"></i><span class="text-emerald-400">Copied!</span>';
+      const btn = document.getElementById('copyBtn');
+      const status = document.getElementById('copyStatus');
+
+      const showCopied = () => {
+        btn.innerHTML = '<i data-lucide="check" class="w-4 h-4 text-plum"></i><span>Copied!</span>';
+        status.textContent = 'Email copied to clipboard';
         lucide.createIcons();
         setTimeout(() => {
           btn.innerHTML = '<i data-lucide="copy" class="w-4 h-4"></i><span>Copy Email</span>';
+          status.textContent = '';
           lucide.createIcons();
-        }, 2000);
-      });
+        }, 2200);
+      };
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(showCopied).catch(() => fallbackCopy(email, showCopied));
+      } else {
+        fallbackCopy(email, showCopied);
+      }
     }
+
+    function fallbackCopy(text, onSuccess) {
+      const temp = document.createElement('textarea');
+      temp.value = text;
+      temp.setAttribute('readonly', '');
+      temp.style.position = 'absolute';
+      temp.style.left = '-9999px';
+      document.body.appendChild(temp);
+      temp.select();
+      try {
+        document.execCommand('copy');
+        onSuccess();
+      } catch (err) {
+        window.location.href = 'mailto:' + text;
+      }
+      document.body.removeChild(temp);
+    }
+
+    // Mobile Navigation Drawer Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.getElementById('mobileMenuBtn');
+      const iconOpen = document.getElementById('menuIconOpen');
+      const iconClose = document.getElementById('menuIconClose');
+      const isHidden = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden', !isHidden);
+      btn.setAttribute('aria-expanded', String(isHidden));
+      iconOpen.classList.toggle('hidden', isHidden);
+      iconClose.classList.toggle('hidden', !isHidden);
+      lucide.createIcons();
+    }
+
+    // Toggle Kitchen Experiments Culinary Insight vs Marketing Parallel
+    let kitchenParallelMode = false;
+    function toggleKitchen() {
+      kitchenParallelMode = !kitchenParallelMode;
+      const textEl = document.getElementById('kitchenText');
+      const btnEl = document.getElementById('kitchenToggleBtn');
+      if (kitchenParallelMode) {
+        textEl.innerHTML = '<strong class="text-brick block text-[11px] mb-1">Marketing Parallel:</strong>High heat = the opening hook. Balanced acidity = answering objections face-to-face. Tempering spices = the post-purchase retention surprise.';
+        btnEl.innerHTML = '<span>Culinary insight</span> &larr;';
+      } else {
+        textEl.textContent = 'Treating the kitchen like a flavor A/B test: balancing acidity, tweaking heat, and testing how subtle seasoning changes completely transform a dish. You get to eat your winning prototypes.';
+        btnEl.innerHTML = '<span>Marketing parallel</span> &rarr;';
+      }
+    }
+
+    // Roll for a Recipe Easter Egg
+    const recipes = [
+      { name: "Slow-Cooked Dal Makhani with Charcoal Butter", desc: "Simmered overnight, tempered with garlic, and smoked with charcoal and fenugreek. Pure patience marketing." },
+      { name: "Blistered Tomato & Pepper Chutney", desc: "High flame searing + mustard seed tadka + lime zest. Fast, punchy, zero fluff." },
+      { name: "Crispy Smashed Potatoes with Chili-Lime Dust", desc: "Double-baked for extreme crunch, finished with fresh zest for high-contrast retention." },
+      { name: "Cardamom-Espresso Affogato", desc: "De’Longhi pulled espresso over rich vanilla bean gelato with freshly cracked green cardamom." }
+    ];
+    let recipeIdx = 0;
+    function rollRecipe() {
+      const box = document.getElementById('recipeBox');
+      const nameEl = document.getElementById('recipeName');
+      const descEl = document.getElementById('recipeDesc');
+      const btnText = document.getElementById('recipeRollBtnText');
+
+      const pick = recipes[recipeIdx % recipes.length];
+      recipeIdx++;
+
+      box.classList.remove('hidden');
+      nameEl.textContent = pick.name;
+      descEl.textContent = pick.desc;
+      const nextLabel = "Roll another experiment 🎲";
+      const shortLabel = btnText.querySelector('[data-recipe-short]');
+      const longLabel = btnText.querySelector('[data-recipe-long]');
+      if (shortLabel && longLabel) {
+        shortLabel.textContent = nextLabel;
+        longLabel.textContent = nextLabel;
+      } else {
+        btnText.textContent = nextLabel;
+      }
+    }
+
+    // Keyboard Tab Focus Trap for Modals (WCAG AA Compliance)
+    document.addEventListener('keydown', function(e) {
+      if (e.key !== 'Tab') return;
+      const activeModal = Array.from(document.querySelectorAll('.modal-overlay')).find(m => !m.classList.contains('hidden'));
+      if (!activeModal) return;
+
+      const focusables = activeModal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+      if (!focusables.length) return;
+
+      const firstEl = focusables[0];
+      const lastEl = focusables[focusables.length - 1];
+
+      if (e.shiftKey && document.activeElement === firstEl) {
+        e.preventDefault();
+        lastEl.focus();
+      } else if (!e.shiftKey && document.activeElement === lastEl) {
+        e.preventDefault();
+        firstEl.focus();
+      }
+    });
   </script>
 </body>
 </html>
